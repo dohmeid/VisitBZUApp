@@ -17,492 +17,546 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingConstraints">
+                android:layout_width="410dp"
+                android:layout_height="170dp"
+                android:layout_marginBottom="10dp">
 
-                <ImageView
-                    android:id="@+id/imageView2"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="160dp"
-                    app:srcCompat="@drawable/photo_bzulandscape" />
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
 
-                <TextView
-                    android:id="@+id/text3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="HELLO, GUEST!"
-                    android:textColor="@color/white"
-                    android:textSize="10sp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="40dp" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp">
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="birzeit university landscape"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/photo_bzulandscape"/>
 
                     <TextView
-                        android:id="@+id/text1"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_bold"
-                        android:text="BIRZEIT "
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/text2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:textAlignment="center"
                         android:fontFamily="@font/montserrat"
-                        android:text="UNIVERSITY"
+                        android:text="HELLO, GUEST!"
                         android:textColor="@color/white"
-                        android:textSize="15sp" />
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.049"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0">
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="BIRZEIT "
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:letterSpacing="0.1"/>
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:text="UNIVERSITY"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:letterSpacing="0.1"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <SearchView
-                android:id="@+id/searchView"
-                android:layout_width="370dp"
-                android:layout_height="55dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginRight="16dp"
-                android:background="@drawable/border_searchview"
-                android:color="#2B581C"
-                android:iconifiedByDefault="false"
-                android:queryHint="I am looking for ..."
-                app:layout_constraintEnd_toEndOf="parent">
-
-            </SearchView>
-
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="410dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_height="55dp"
+                    android:background="@drawable/border_searchview"
+                    android:color="#2B581C"
+                    android:theme="@style/ThemeOverlay.SearchView"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="I am looking for ..." />
 
-                    <Button
-                        android:id="@+id/registrationButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Registration"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_regsitration"
-                        app:iconGravity="textTop"
-                        app:iconPadding="0dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
+                <View
+                    android:layout_width="390dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#2B581C" />
+            </LinearLayout>
 
-                    <Button
-                        android:id="@+id/healthCareButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Health Care"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_healthcare"
-                        app:iconGravity="textTop"
-                        app:iconPadding="0dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-
-                    <Button
-                        android:id="@+id/cafeteriaButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Cafeterias"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_cafeteria"
-                        app:iconGravity="textTop"
-                        app:iconPadding="0dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-
-                    <Button
-                        android:id="@+id/museumsLibrariesButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Museums &amp; Libraries"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_museums"
-                        app:iconGravity="textTop"
-                        app:iconPadding="2dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-
-                </LinearLayout>
+            <LinearLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <Button
-                        android:id="@+id/prayersButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Prayers"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_prayers"
-                        app:iconGravity="textTop"
-                        app:iconPadding="0dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-
-                    <Button
-                        android:id="@+id/parkingButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="200dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="Parking &amp; Transportation Services."
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_parking"
-                        app:iconGravity="textTop"
-                        app:iconPadding="2dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-
-                    <Button
-                        android:id="@+id/faqsButton"
-                        style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
-                        android:backgroundTint="@color/white"
-                        android:fontFamily="@font/montserrat"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
-                        android:text="FAQS"
-                        android:textAllCaps="false"
-                        android:textColor="#2B581C"
-                        android:textSize="12sp"
-                        app:cornerRadius="10dp"
-                        app:icon="@drawable/vector_faqs"
-                        app:iconGravity="textTop"
-                        app:iconPadding="0dp"
-                        app:iconSize="50dp"
-                        app:iconTint="#2B581C"
-                        app:strokeColor="#A8CC9B"
-                        app:strokeWidth="2dp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="75dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <Button
                         android:id="@+id/mapButton"
                         style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
                         android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
                         android:backgroundTint="@color/white"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
                         android:text="Map"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:cornerRadius="10dp"
                         app:icon="@drawable/vector_map"
                         app:iconGravity="textTop"
                         app:iconPadding="0dp"
-                        app:iconSize="50dp"
+                        app:iconSize="45dp"
                         app:iconTint="#2B581C"
                         app:strokeColor="#A8CC9B"
                         app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/virtualTourButton"
                         style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
                         android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
                         android:backgroundTint="@color/white"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
                         android:text="Virtual Tour"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:cornerRadius="10dp"
                         app:icon="@drawable/vector_virtour"
                         app:iconGravity="textTop"
                         app:iconPadding="0dp"
-                        app:iconSize="50dp"
+                        app:iconSize="45dp"
                         app:iconTint="#2B581C"
                         app:strokeColor="#A8CC9B"
                         app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
 
                     <Button
                         android:id="@+id/facultiesButton"
                         style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
-                        android:layout_gravity="center"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
                         android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
                         android:backgroundTint="@color/white"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
                         android:text="Faculties"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:cornerRadius="10dp"
                         app:icon="@drawable/vector_faculty"
                         app:iconGravity="textTop"
                         app:iconPadding="0dp"
-                        app:iconSize="50dp"
+                        app:iconSize="45dp"
                         app:iconTint="#2B581C"
                         app:strokeColor="#A8CC9B"
                         app:strokeWidth="2dp" />
 
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
                     <Button
                         android:id="@+id/stuCouncilButton"
                         style="@style/Widget.MaterialComponents.Button.Icon"
-                        android:layout_width="100dp"
-                        android:layout_height="85dp"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
                         android:layout_gravity="center"
                         android:layout_margin="0dp"
-                        android:layout_marginStart="0dp"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="0dp"
-                        android:layout_marginEnd="0dp"
-                        android:layout_marginRight="0dp"
-                        android:layout_marginBottom="0dp"
                         android:backgroundTint="@color/white"
                         android:drawablePadding="0dp"
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="true"
                         android:padding="0dp"
-                        android:paddingLeft="0dp"
-                        android:paddingTop="0dp"
-                        android:paddingEnd="0dp"
-                        android:paddingRight="0dp"
-                        android:paddingBottom="0dp"
                         android:text="Student’s Council"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
-                        android:textSize="12sp"
+                        android:textSize="11sp"
                         app:cornerRadius="10dp"
                         app:icon="@drawable/vector_stucouncil"
-                        app:iconGravity="textTop"
-                        app:iconPadding="2dp"
-                        app:iconSize="50dp"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
                         app:iconTint="#2B581C"
                         app:strokeColor="#A8CC9B"
                         app:strokeWidth="2dp" />
 
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/registrationButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Registration"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_regsitration"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/healthCareButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Health Care"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_healthcare"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/cafeteriaButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Cafeterias"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_cafeteria"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/museumsLibrariesButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity=""
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Museums &amp; Libraries"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_museums"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/prayersButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Prayers"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_prayers"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/parkingButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="195dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Parking &amp; Transportation Services"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_parking"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/faqsButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="FAQS"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/vector_faqs"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="400dp"
-                android:orientation="vertical"></LinearLayout>
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="History Surrounds You"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/horizontalRv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    tools:itemCount="5"
+                    tools:listitem="@layout/recycler_view_item" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Explore Campus"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/horizontalRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scrollbars="horizontal"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/recycler_view_item" />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>

@@ -9,28 +9,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class HomePage extends AppCompatActivity {
-
-    SearchView searchView;
-    ListView listView;
+public class Try extends AppCompatActivity {
 
     RecyclerView rv;
     ArrayList<String> dataSource;
     LinearLayoutManager linearLayoutManager;
-    HomePage.MyRvAdapter myRvAdapter;
+    MyRvAdapter myRvAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_page);
+        setContentView(R.layout.activity_try);
 
-        rv = findViewById(R.id.horizontalRv2);
+        rv = findViewById(R.id.horizontalRv);
         //Setting the data source
         dataSource = new ArrayList<>();
         dataSource.add("Over a century, what began as a small girls’ school in Birzeit town has become the most prestigious Palestinian university," +
@@ -46,15 +41,15 @@ public class HomePage extends AppCompatActivity {
                 " dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad");
 
 
-        linearLayoutManager = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
+
+
+        linearLayoutManager = new LinearLayoutManager(Try.this, LinearLayoutManager.HORIZONTAL, false);
         myRvAdapter = new MyRvAdapter(dataSource);
         rv.setLayoutManager(linearLayoutManager);
         rv.setAdapter(myRvAdapter);
-
     }
 
-
-    class MyRvAdapter extends RecyclerView.Adapter<HomePage.MyRvAdapter.MyHolder> {
+    class MyRvAdapter extends RecyclerView.Adapter<MyRvAdapter.MyHolder> {
         ArrayList<String> data;
 
         public MyRvAdapter(ArrayList<String> data) {
@@ -63,13 +58,13 @@ public class HomePage extends AppCompatActivity {
 
         @NonNull
         @Override
-        public HomePage.MyRvAdapter.MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            View view = LayoutInflater.from(HomePage.this).inflate(R.layout.rv_item, parent, false);
+        public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(Try.this).inflate(R.layout.rv_item, parent, false);
             return new MyHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull HomePage.MyRvAdapter.MyHolder holder, int position) {
+        public void onBindViewHolder(@NonNull MyHolder holder, int position) {
             holder.tvTitle.setText(data.get(position));
         }
 
