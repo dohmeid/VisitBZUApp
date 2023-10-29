@@ -43,16 +43,16 @@
                         android:layout_height="match_parent"
                         android:contentDescription="birzeit university landscape"
                         android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/photo_bzulandscape"/>
+                        app:srcCompat="@drawable/photo_bzulandscape" />
 
                     <TextView
                         android:id="@+id/text3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="55dp"
-                        android:textAlignment="center"
                         android:fontFamily="@font/montserrat"
                         android:text="HELLO, GUEST!"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="10sp"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,8 +66,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="34dp"
-                        android:orientation="horizontal"
                         android:gravity="center"
+                        android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -80,20 +80,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
                             android:text="BIRZEIT "
                             android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:letterSpacing="0.1"/>
+                            android:textSize="15sp" />
 
                         <TextView
                             android:id="@+id/text2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"
+                            android:letterSpacing="0.1"
                             android:text="UNIVERSITY"
                             android:textColor="@color/white"
-                            android:textSize="15sp"
-                            android:letterSpacing="0.1"/>
+                            android:textSize="15sp" />
 
                     </LinearLayout>
 
@@ -125,12 +125,12 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="400dp"
+                android:layout_width="410dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -462,9 +462,9 @@
             <LinearLayout
                 android:layout_width="410dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:layout_marginBottom="10dp">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="390dp"
@@ -500,19 +500,18 @@
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/horizontalRv2"
+                    android:id="@+id/historyRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scrollbars="horizontal"
-                    tools:itemCount="5"
-                    tools:listitem="@layout/recycler_view_item" />
-
+                    tools:itemCount="3" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="410dp"
                 android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -549,13 +548,23 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="We recommend that you spend some time exploring our beautiful campus. Here are some places you should not miss."
+                    android:textAlignment="center"
+                    android:textColor="#2B581C"
+                    android:textSize="10sp" />
+
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/horizontalRv"
+                    android:id="@+id/suggestionsRV"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     android:scrollbars="horizontal"
-                    tools:itemCount="3"
-                    tools:listitem="@layout/recycler_view_item" />
+                    tools:itemCount="3" />
             </LinearLayout>
 
         </LinearLayout>

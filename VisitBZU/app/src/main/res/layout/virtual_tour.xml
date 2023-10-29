@@ -4,14 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Try">
+    tools:context=".features.virtualTour.VirtualTour">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/horizontalRv"
+    <WebView
+        android:id="@+id/website"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scrollbars="horizontal"
-        tools:itemCount="5"
-        tools:listitem="@layout/recycler_view_item" />
-
+        android:layout_height="match_parent" />
 </LinearLayout>
