@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/doha_photo_page_background"
+
+    tools:context=".WelcomeScreen">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:letterSpacing="0.2"
+        android:text="Welcome to Birzeit"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="Let’s Get Started"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:letterSpacing="0.1"
+        android:text="Select Language"
+        android:textAlignment="center"
+        android:textColor="#2B581C"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.711" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/arButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#66A8CC9B"
+        android:fontFamily="@font/montserrat"
+        android:text="مرحبا                           العربية"
+        android:textColor="#2B581C"
+        android:textSize="20sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"
+        app:strokeColor="#66A8CC9B"
+        app:strokeWidth="2dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/enButton"
+        android:layout_width="330dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#66A8CC9B"
+        android:fontFamily="@font/montserrat"
+        android:text="English                                  Hello"
+        android:textColor="#2B581C"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.893"
+        app:strokeColor="#66A8CC9B"
+        app:strokeWidth="2dp" />
+
+    <Button
+        android:id="@+id/nextButton"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#66A8CC9B"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/doha_vector_next"
+        app:iconGravity="textTop"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#2B581C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.980"
+        app:strokeColor="#66A8CC9B"
+        app:strokeWidth="1dp"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
