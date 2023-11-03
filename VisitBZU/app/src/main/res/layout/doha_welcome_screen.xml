@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/photo_page_background"
+    android:background="@drawable/doha_photo_page_background"
 
     tools:context=".WelcomeScreen">
 
@@ -107,7 +107,7 @@
         android:paddingEnd="0dp"
         android:paddingRight="0dp"
         app:cornerRadius="10dp"
-        app:icon="@drawable/vector_next"
+        app:icon="@drawable/doha_vector_next"
         app:iconGravity="textTop"
         app:iconPadding="0dp"
         app:iconSize="30dp"

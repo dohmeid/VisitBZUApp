@@ -28,7 +28,7 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     @NonNull
     @Override
     public SuggestionsAdapter.SuggestionsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.home_page_suggestion_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.doha_home_page_suggestion_item, parent, false);
         return new SuggestionsAdapter.SuggestionsHolder(view);
     }
 

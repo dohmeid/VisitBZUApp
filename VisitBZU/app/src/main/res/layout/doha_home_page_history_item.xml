@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="center"
-            android:src="@drawable/photo_bzu_history"  />
+            android:src="@drawable/doha_photo_bzu_history"  />
 
         <TextView
             android:id="@+id/title"

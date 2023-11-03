@@ -12,7 +12,7 @@ public class VirtualTour extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.virtual_tour);
+        setContentView(R.layout.doha_virtual_tour);
 
         WebView myWebView = (WebView) findViewById(R.id.website);
         setContentView(myWebView);

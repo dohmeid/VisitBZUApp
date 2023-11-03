@@ -7,36 +7,30 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.SearchView;
 
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
 import com.example.visitbzu.features.virtualTour.VirtualTour;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
 
-    SearchView searchView;
-    ListView listView;
+    FirebaseFirestore db;
+    //SearchView searchView;
+    //ListView listView;
 
-    Button virTour;
-    RecyclerView historyRV;
-    RecyclerView suggestionsRV;
+    Button virTourBtn;
+    RecyclerView historyRV, suggestionsRV;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_page);
-
-        virTour = findViewById(R.id.virtualTourButton);
-        virTour.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, VirtualTour.class);
-            startActivity(i);
-            finish();
-        });
+        setContentView(R.layout.doha_home_page);
 
 
         historyRV = findViewById(R.id.historyRV);
@@ -44,8 +38,26 @@ public class HomePage extends AppCompatActivity {
 
         suggestionsRV = findViewById(R.id.suggestionsRV);
         suggestionsRecycler();
+
+        activateButtons();
     }
 
+/*
+    private void readDatabase() {  //READ DATA 1.using the firebase console 2.using get() method
+        db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Log.d(TAG, document.getId() + " => " + document.getData());
+                    }
+                } else {
+                    Log.w(TAG, "Error getting documents.", task.getException());
+                }
+            }
+        });
+    }
+*/
 
     private void historyRecycler() {
         ArrayList<String> dataSource;
@@ -56,26 +68,19 @@ public class HomePage extends AppCompatActivity {
                 + "\n"
                 + "Birzeit University has been a thorn in the side of the occupation, insisting on playing its role of enlightenment and creating a multicultural Palestinian society on the campus grounds.");
 
-
-        dataSource.add("Birzeit University was initially established as a school in 1924 by Ms. Nabiha. Then in 1953, it started offering first-year university courses in arts and sciences. It later expanded to second-year university classes in 1961 and associate degrees in 1992 enabling students to transfer to other universities in the Arab world and elsewhere to complete their bachelor’s degrees.");
-
-        dataSource.add("In 1967, the Israeli military occupation of the West Bank and Gaza Strip led to travel restrictions for Palestinians, prompting Birzeit to gradually eliminate its high school program and concentrate on a higher education.");
-
-        dataSource.add("In 1975, the name, Birzeit University was officially adopted, and Birzeit became the first Arab university to be established in Palestine. The first graduation ceremony was held on July 11, 1976. \n" +
-                "The university established faculties of Commerce and Economics in 1978, followed by Engineering in 1979. Graduate programs were introduced in 1977, and the Faculty of Graduate Studies was formally established in 1996.\n");
-
-        dataSource.add("In 1973, just as Birzeit’s development into a full-fledged university approached completion, Israel closed the campus by military order for two weeks. The university faced repression and closures by Israeli military authorities multiple times 1979-1992.\n" +
-                "Despite closures, the university continued to operate underground with small study groups outside the campus, causing students to take longer to graduate.\n");
-
-        dataSource.add("Despite facing repressive measures, Birzeit University continues to thrive with over 900 faculty members and around 10,103 students, with 64% female and 36% male. \n" +
-                "The university aims to prepare the young Palestinian generation for responsible leadership and citizenship, emphasizing social awareness and national commitment.\n");
+        db = FirebaseFirestore.getInstance();
+        db.collection("HomePageData").document("/HistoryRV").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                //City city = documentSnapshot.toObject(City.class);
+            }
+        });
 
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
         HistoryAdapter myRvAdapter = new HistoryAdapter(dataSource);
         historyRV.setLayoutManager(linearLayoutManager);
         historyRV.setAdapter(myRvAdapter);
-
         //PagerSnapHelper helper = new PagerSnapHelper();
         //helper.attachToRecyclerView(historyRV);
         //historyRV.addItemDecoration(new CirclePagerIndicatorDecoration());
@@ -86,9 +91,9 @@ public class HomePage extends AppCompatActivity {
         ArrayList<String> titlesData;
         ArrayList<String> descData;
         ArrayList<Integer> imagesData = new ArrayList<>();
-        imagesData.add(R.drawable.photo_pal_museum);
-        imagesData.add(R.drawable.photo_najjad_zeenni);
-        imagesData.add(R.drawable.photo_students_break);
+        imagesData.add(R.drawable.doha_photo_pal_museum);
+        imagesData.add(R.drawable.doha_photo_najjad_zeenni);
+        imagesData.add(R.drawable.doha_photo_students_break);
 
         //Setting the data source
         titlesData = new ArrayList<>();
@@ -102,9 +107,20 @@ public class HomePage extends AppCompatActivity {
         descData.add("A Non-Governmental Association promotes Palestinian culture, presents new narratives, and provides creative spaces for educational programs and innovative research, fostering a vibrant local and international community.");
 
         LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
-        SuggestionsAdapter myRvAdapter2 = new SuggestionsAdapter(titlesData, descData,imagesData);
+        SuggestionsAdapter myRvAdapter2 = new SuggestionsAdapter(titlesData, descData, imagesData);
         suggestionsRV.setLayoutManager(linearLayoutManager2);
         suggestionsRV.setAdapter(myRvAdapter2);
+    }
+
+    private void activateButtons() {
+
+        //virtualTour feature
+        virTourBtn = findViewById(R.id.virtualTourButton);
+        virTourBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, VirtualTour.class);
+            startActivity(i);
+            finish();
+        });
     }
 
 }

@@ -19,7 +19,7 @@ public class WelcomeScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome_screen);
+        setContentView(R.layout.doha_welcome_screen);
 
         nextBtn = findViewById(R.id.nextButton);
         arabicBtn = findViewById(R.id.arButton);

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "428255786451",
+    "project_id": "visitbzu",
+    "storage_bucket": "visitbzu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428255786451:android:26d6434b6ab9320bff2b26",
+        "android_client_info": {
+          "package_name": "com.example.visitbzu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPITOIrZooOplkVWrbvoZMNfJZe4FTGT4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
