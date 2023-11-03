@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="310dp"
+    android:layout_height="280dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="#A8CC9B"
+    app:strokeWidth="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="13dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="260dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="5dp">
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doha_photo_bzu_history" />
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="Birzeit university"
+                    android:textColor="#2B581C"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans"
+                    android:gravity="top"
+                    android:text="Also known as the (Blue Dome) building. It is an innovation space within Birzeit University designed to nurture ideas and creativity and provide an environment which is conducive to creating new businesses or developing existing ones by providing a unique and highly flexible combination of business development processes, people, academia and infrastructure."
+                    android:textColor="#2B581C"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
