@@ -1,4 +1,4 @@
-package com.example.visitbzu;
+package com.example.visitbzu.features.faculties;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.visitbzu.R;
 
 import java.util.ArrayList;
 import java.util.List;

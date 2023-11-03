@@ -1,9 +1,8 @@
-package com.example.graduationproject;
+package com.example.visitbzu.features.map;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
@@ -11,12 +10,13 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
+import com.example.visitbzu.HomePage;
+import com.example.visitbzu.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -63,7 +63,7 @@ public class sararom_Map extends AppCompatActivity implements OnMapReadyCallback
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(sararom_Map.this, sararom_MainActivity.class));
+                startActivity(new Intent(sararom_Map.this, HomePage.class));
             }
         });
 

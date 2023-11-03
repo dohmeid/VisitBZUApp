@@ -1,4 +1,4 @@
-package com.example.visitbzu;
+package com.example.visitbzu.features.faculties;
 
 import java.util.List;
 

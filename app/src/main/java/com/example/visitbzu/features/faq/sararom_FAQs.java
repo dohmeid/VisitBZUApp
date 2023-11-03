@@ -1,4 +1,4 @@
-package com.example.graduationproject;
+package com.example.visitbzu.features.faq;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.visitbzu.HomePage;
+import com.example.visitbzu.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +27,7 @@ public class sararom_FAQs extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(sararom_FAQs.this, sararom_MainActivity.class));
+                startActivity(new Intent(sararom_FAQs.this, HomePage.class));
 
             }
         });

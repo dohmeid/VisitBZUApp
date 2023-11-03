@@ -1,4 +1,4 @@
-package com.example.graduationproject;
+package com.example.visitbzu.features.faq;
 
 
 import android.annotation.SuppressLint;
@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.visitbzu.R;
 
 import java.util.List;
 

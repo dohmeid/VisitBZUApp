@@ -1,4 +1,4 @@
-package com.example.graduationproject;
+package com.example.visitbzu.features.faq;
 
 import android.widget.ImageView;
 

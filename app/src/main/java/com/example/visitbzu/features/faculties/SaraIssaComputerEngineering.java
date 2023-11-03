@@ -1,4 +1,4 @@
-package com.example.visitbzu;
+package com.example.visitbzu.features.faculties;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,21 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SaraIssaComputerScience extends AppCompatActivity {
+import com.example.visitbzu.R;
+
+public class SaraIssaComputerEngineering extends AppCompatActivity {
 
     private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_computer_science);
+        setContentView(R.layout.activity_computer_engineering);
 
         btnBack = findViewById(R.id.btnBack);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SaraIssaComputerScience.this, SaraIssaFacultyOfInformationTechnology.class);
+                Intent intent = new Intent(SaraIssaComputerEngineering.this, SaraIssaFacultyOfInformationTechnology.class);
                 startActivity(intent);
             }
         });

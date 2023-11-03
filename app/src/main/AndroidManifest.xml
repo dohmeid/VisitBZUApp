@@ -14,50 +14,40 @@
         tools:targetApi="31">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAekxTHTclJsHVgiEGK2aTW3aWypdmMPTU">
-        </meta-data>
-      
-        <activity
-            android:name=".sararom_MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:value="AIzaSyAekxTHTclJsHVgiEGK2aTW3aWypdmMPTU"></meta-data>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-      
-        <activity android:name=".sararom_FAQs"></activity>
-        <activity android:name=".sararom_Map"></activity>
- 
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".features.faq.sararom_FAQs"></activity>
+        <activity android:name=".features.map.sararom_Map"></activity>
+
         <activity
-            android:name=".SaraIssaLibraries"
+            android:name=".features.libraries.SaraIssaLibraries"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaCyberSecurity"
+            android:name=".features.faculties.SaraIssaCyberSecurity"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaComputerEngineeringMaster"
+            android:name=".features.faculties.SaraIssaComputerEngineeringMaster"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaElectricalEngineering"
+            android:name=".features.faculties.SaraIssaElectricalEngineering"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaComputerScience"
+            android:name=".features.faculties.SaraIssaComputerScience"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaComputerEngineering"
+            android:name=".features.faculties.SaraIssaComputerEngineering"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaPrayer"
+            android:name=".features.prayers.SaraIssaPrayer"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaFacultyOfInformationTechnology"
+            android:name=".features.faculties.SaraIssaFacultyOfInformationTechnology"
             android:exported="false" />
         <activity
-            android:name=".SaraIssaMainActivity"
-            android:exported="false" />
-      <activity
             android:name=".features.virtualTour.VirtualTour"
             android:exported="false" />
         <activity
@@ -75,10 +65,6 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
-      
     </application>
 
 </manifest>

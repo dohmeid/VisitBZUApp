@@ -8,6 +8,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.example.visitbzu.features.faculties.SaraIssaFacultyOfInformationTechnology;
+import com.example.visitbzu.features.faq.sararom_FAQs;
+import com.example.visitbzu.features.libraries.SaraIssaLibraries;
+import com.example.visitbzu.features.map.sararom_Map;
+import com.example.visitbzu.features.prayers.SaraIssaPrayer;
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
 import com.example.visitbzu.features.virtualTour.VirtualTour;
@@ -23,7 +28,7 @@ public class HomePage extends AppCompatActivity {
     //SearchView searchView;
     //ListView listView;
 
-    Button virTourBtn;
+    Button mapBtn, virTourBtn, faqsBtn, prayersBtn, facultiesBtn, museumsLibrariesBtn;
     RecyclerView historyRV, suggestionsRV;
 
 
@@ -32,10 +37,8 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doha_home_page);
 
-
         historyRV = findViewById(R.id.historyRV);
         historyRecycler();
-
         suggestionsRV = findViewById(R.id.suggestionsRV);
         suggestionsRecycler();
 
@@ -113,6 +116,46 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void activateButtons() {
+
+        //Map feature
+        mapBtn = findViewById(R.id.mapButton);
+        mapBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, sararom_Map.class);
+            startActivity(i);
+            finish();
+        });
+
+        //FAQs feature
+        faqsBtn = findViewById(R.id.faqsButton);
+        faqsBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, sararom_FAQs.class);
+            startActivity(i);
+            finish();
+        });
+
+        //prayers feature
+        prayersBtn = findViewById(R.id.prayersButton);
+        prayersBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, SaraIssaPrayer.class);
+            startActivity(i);
+            finish();
+        });
+
+        //museums & Libraries feature
+        museumsLibrariesBtn = findViewById(R.id.museumsLibrariesButton);
+        museumsLibrariesBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, SaraIssaLibraries.class);
+            startActivity(i);
+            finish();
+        });
+
+        //faculties feature
+        facultiesBtn = findViewById(R.id.facultiesButton);
+        facultiesBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, SaraIssaFacultyOfInformationTechnology.class);
+            startActivity(i);
+            finish();
+        });
 
         //virtualTour feature
         virTourBtn = findViewById(R.id.virtualTourButton);

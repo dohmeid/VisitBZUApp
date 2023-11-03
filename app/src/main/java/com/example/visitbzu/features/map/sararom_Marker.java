@@ -1,4 +1,4 @@
-package com.example.graduationproject;
+package com.example.visitbzu.features.map;
 
 import com.google.android.gms.maps.model.LatLng;
 

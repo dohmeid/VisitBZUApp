@@ -1,4 +1,4 @@
-package com.example.visitbzu;
+package com.example.visitbzu.features.faculties;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+
+import com.example.visitbzu.R;
 
 import java.util.ArrayList;
 import java.util.List;
