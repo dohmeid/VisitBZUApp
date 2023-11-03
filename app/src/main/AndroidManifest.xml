@@ -8,10 +8,28 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitBZU"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAekxTHTclJsHVgiEGK2aTW3aWypdmMPTU">
+        </meta-data>
       
+        <activity
+            android:name=".sararom_MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      
+        <activity android:name=".sararom_FAQs"></activity>
+        <activity android:name=".sararom_Map"></activity>
+ 
         <activity
             android:name=".SaraIssaLibraries"
             android:exported="false" />
@@ -60,7 +78,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
+      
     </application>
 
 </manifest>

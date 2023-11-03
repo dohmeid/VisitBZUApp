@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sararom_linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/sararom_campus_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.fragment.app.FragmentContainerView>
+
+    <include
+        layout="@layout/sararom_map_tool_bar">
+    </include>
+
+    <LinearLayout
+        android:id="@+id/sararom_destination_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/sararom_map_top"
+        android:alpha="0.8"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:visibility="invisible"
+        >
+
+        <EditText
+            android:id="@+id/sararom_curr_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:hint="Current Location"></EditText>
+
+        <EditText
+            android:id="@+id/sararom_des_loc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Desired Location"></EditText>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Walking distance:"
+            android:fontFamily="@font/poppins"
+            android:textSize="18sp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/sararom_localization"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="384dp"
+        android:layout_marginBottom="680dp"
+        android:src="@drawable/sararom__icon__compass_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></ImageView>
+
+    <ImageView
+        android:id="@+id/sararom_icons_holder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sararom_icons_holder"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sararom_campus_map"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sararom_campus_map"></ImageView>
+
+    <ImageView
+        android:id="@+id/sararom_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="130dp"
+        android:src="@drawable/sararom_map"
+        app:layout_constraintBottom_toBottomOf="@+id/sararom_icons_holder"
+        app:layout_constraintEnd_toEndOf="@+id/sararom_icons_holder"></ImageView>
+    <ImageView
+        android:id="@+id/sararom_layers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="90dp"
+        android:src="@drawable/sararom_layers"
+        app:layout_constraintBottom_toBottomOf="@+id/sararom_icons_holder"
+        app:layout_constraintEnd_toEndOf="@+id/sararom_icons_holder"></ImageView>
+    <ImageView
+        android:id="@+id/sararom_zoom_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="55dp"
+        android:src="@drawable/sararom_zoom_in"
+        app:layout_constraintBottom_toBottomOf="@+id/sararom_icons_holder"
+        app:layout_constraintEnd_toEndOf="@+id/sararom_icons_holder"></ImageView>
+    <ImageView
+        android:id="@+id/sararom_zoom_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/sararom_zoom_out"
+        app:layout_constraintBottom_toBottomOf="@+id/sararom_icons_holder"
+        app:layout_constraintEnd_toEndOf="@+id/sararom_icons_holder"></ImageView>
+
+    <LinearLayout
+        android:id="@+id/sararom_lowerbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sararom_dialog"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center_horizontal">
+        <View
+            android:layout_width="70dp"
+            android:layout_height="3dp"
+            android:background="@color/white"
+            ></View>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

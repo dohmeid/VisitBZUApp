@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sararom_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="180"
+    tools:ignore="InvalidId"
+    app:cardBackgroundColor="@color/sararom_lite_green"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:id="@+id/sararom_question_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sararom_ques"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="question 1"
+                android:textColor="#91C280"
+                android:textSize="18sp"></TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/drop_arrow"
+                android:alpha="0.3 "
+                android:rotation="270"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/sararom_dropdownarrow"
+                >
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sararom_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="qlllllllllllh ygyyuy"
+            android:textColor="#000"
+            android:textSize="12sp"
+
+            ></TextView>
+        <View
+            android:id="@+id/sararom_background"
+            android:layout_width="360dp"
+            android:layout_marginLeft="35dp"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            android:alpha="0.3 "
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

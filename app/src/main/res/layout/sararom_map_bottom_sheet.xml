@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/sararom_dialog"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="20dp"
+    android:paddingBottom="80dp">
+    <View
+        android:layout_width="70dp"
+        android:layout_height="3dp"
+        android:background="@color/white"
+        android:id="@+id/sararom_close_dialog"
+        ></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sararom_icons_row1"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sararom_facilities"
+            android:src="@drawable/sararom_facilites"
+            android:layout_weight="1"></ImageView>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sararom_parking"
+            android:src="@drawable/sararom_parking"
+            android:layout_weight="1"></ImageView>
+
+        <ImageView
+            android:id="@+id/sararom_cafeterias"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sararom_cafeterias"
+            android:layout_weight="1"></ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sararom_text_row1"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Facilities"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Parking"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Cafeterias"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"></TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sararom_icons_row2"
+        android:layout_marginTop="10dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sararom_clinic"
+            android:src="@drawable/sararom_clinic"
+            android:layout_weight="1"></ImageView>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sararom_libraries"
+            android:src="@drawable/sararom_libraries"
+            android:layout_weight="1"></ImageView>
+
+        <ImageView
+            android:id="@+id/sararom_destination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sararom_destination"
+            android:layout_weight="1"></ImageView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/sararom_text_row2"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Clinic"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Libraries"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins"
+            android:text="Find destination"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="14sp"></TextView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
