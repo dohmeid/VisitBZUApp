@@ -8,11 +8,38 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitBZU"
         tools:targetApi="31">
+      
         <activity
+            android:name=".SaraIssaLibraries"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaCyberSecurity"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaComputerEngineeringMaster"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaElectricalEngineering"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaComputerScience"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaComputerEngineering"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaPrayer"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaFacultyOfInformationTechnology"
+            android:exported="false" />
+        <activity
+            android:name=".SaraIssaMainActivity"
+            android:exported="false" />
+      <activity
             android:name=".features.virtualTour.VirtualTour"
             android:exported="false" />
         <activity
@@ -26,7 +53,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -34,6 +60,7 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
     </application>
 
 </manifest>

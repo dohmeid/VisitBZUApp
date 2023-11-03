@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">VisitBZU</string>
     <string name="app_name" translatable="false">VisitBZU</string>
     <string name="title_activity_welcome_page">WelcomePage</string>
     <!-- Strings used for fragments for navigation -->
@@ -43,4 +44,5 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+
 </resources>
