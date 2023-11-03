@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="410dp"
+                android:layout_height="170dp"
+                android:layout_marginBottom="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="birzeit university landscape"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/doha_photo_bzulandscape" />
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="HELLO, GUEST!"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.049"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="34dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0">
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="BIRZEIT "
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:letterSpacing="0.1"
+                            android:text="UNIVERSITY"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/doha_border_searchview"
+                    android:color="#2B581C"
+                    android:theme="@style/ThemeOverlay.SearchView"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="I am looking for ..." />
+
+                <View
+                    android:layout_width="390dp"
+                    android:layout_height="1.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#2B581C" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/mapButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Map"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_map"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/virtualTourButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Virtual Tour"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_virtour"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/facultiesButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Faculties"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_faculty"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/stuCouncilButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:drawablePadding="0dp"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="true"
+                        android:padding="0dp"
+                        android:text="Student’s Council"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_stucouncil"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/registrationButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Registration"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_regsitration"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/healthCareButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Health Care"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_healthcare"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/cafeteriaButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Cafeterias"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_cafeteria"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/museumsLibrariesButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity=""
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Museums &amp; Libraries"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_museums"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/prayersButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Prayers"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_prayers"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/parkingButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="195dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Parking &amp; Transportation Services"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_parking"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/faqsButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="FAQS"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_vector_faqs"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="40dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="History Surrounds You"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/historyRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    tools:itemCount="3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="410dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Explore Campus"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="We recommend that you spend some time exploring our beautiful campus. Here are some places you should not miss."
+                    android:textAlignment="center"
+                    android:textColor="#2B581C"
+                    android:textSize="10sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/suggestionsRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="horizontal"
+                    tools:itemCount="3" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

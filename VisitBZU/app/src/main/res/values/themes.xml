@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.VisitBZU" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="ThemeOverlay.SearchView" parent=""> <!-- to style the search bar -->
+        <item name="colorControlNormal">#2B581C</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:editTextColor">#2B581C</item> <!-- Text color -->
+        <item name="android:textColorHint">#802B581C</item> <!-- Hint text color -->
+    </style>
+
+    <style name="Theme.VisitBZU" parent="Base.Theme.VisitBZU" />
+</resources>
