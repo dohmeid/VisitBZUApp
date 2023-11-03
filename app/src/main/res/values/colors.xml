@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sararom_lite_green">#262B581C</color>
+    <color name="sararom_map_color">#91C280</color>
+    <color name="sararom_map_top">#D9D9D9</color>
+
+</resources>

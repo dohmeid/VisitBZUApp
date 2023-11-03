@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/sararom_map_color"
+    android:id="@+id/sararom_map_toolbar">
+    <ImageView
+        android:id="@+id/sararom_arrow_back"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/sararom_arrow_back"
+        android:alpha="0.5"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="BZU Map"
+        android:textSize="28sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        ></TextView>
+
+</androidx.appcompat.widget.Toolbar>
