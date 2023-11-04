@@ -16,7 +16,7 @@ public class SaraIssaCyberSecurity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cyber_security);
+        setContentView(R.layout.sara_issa_activity_cyber_security);
 
         btnBack = findViewById(R.id.btnBack);
 

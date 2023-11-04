@@ -11,6 +11,6 @@ public class SaraIssaPrayer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_prayer);
+        setContentView(R.layout.sara_issa_activity_prayer);
     }
 }

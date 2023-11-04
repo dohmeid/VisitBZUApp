@@ -31,7 +31,7 @@ public class SaraIssaFacultyOfInformationTechnology extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faculty_of_information_technology);
+        setContentView(R.layout.sara_issa_activity_faculty_of_information_technology);
 
         programImageView1 = findViewById(R.id.programImageView1);
         programImageView2 = findViewById(R.id.programImageView2);

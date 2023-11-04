@@ -16,7 +16,7 @@ public class SaraIssaElectricalEngineering extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_electrical_engineering);
+        setContentView(R.layout.sara_issa_activity_electrical_engineering);
 
         btnBack = findViewById(R.id.btnBack);
 

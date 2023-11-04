@@ -16,7 +16,7 @@ public class SaraIssaComputerEngineeringMaster extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_computer_engineering_master);
+        setContentView(R.layout.sara_issa_activity_computer_engineering_master);
 
         btnBack = findViewById(R.id.btnBack);
 

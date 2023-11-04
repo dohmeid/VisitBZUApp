@@ -28,7 +28,7 @@ public class SaraIssaItemAdapter extends RecyclerView.Adapter<SaraIssaItemAdapte
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.each_item , parent , false);
+        View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.sara_issa_each_item, parent , false);
         return new ItemViewHolder(view);
     }
 

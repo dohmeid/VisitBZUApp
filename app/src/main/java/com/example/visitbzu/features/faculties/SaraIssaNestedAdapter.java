@@ -22,7 +22,7 @@ public class SaraIssaNestedAdapter extends RecyclerView.Adapter<SaraIssaNestedAd
     @NonNull
     @Override
     public NestedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.nested_item , parent , false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.sara_issa_nested_item, parent , false);
         return new NestedViewHolder(view);
     }
 
