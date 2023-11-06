@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.doha_splash_screen);
 
         new Handler().postDelayed(() -> {
-            Intent i = new Intent(SplashScreen.this, GetStartedPage.class);
+            Intent i = new Intent(SplashScreen.this, WelcomeScreen.class);
             startActivity(i);
             finish();
         }, SCREEN_TIME);
