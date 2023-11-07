@@ -1,11 +1,18 @@
 package com.example.visitbzu;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 
 import com.example.visitbzu.features.faculties.SaraIssaFacultyOfInformationTechnology;
@@ -16,15 +23,30 @@ import com.example.visitbzu.features.prayers.SaraIssaPrayer;
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
 import com.example.visitbzu.features.virtualTour.VirtualTour;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.ListResult;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicMarkableReference;
 
 public class HomePage extends AppCompatActivity {
 
-    FirebaseFirestore db;
+    private FirebaseFirestore db;
+    private FirebaseStorage storage;
+    private StorageReference storageRef;
     //SearchView searchView;
     //ListView listView;
 
@@ -45,40 +67,31 @@ public class HomePage extends AppCompatActivity {
         activateButtons();
     }
 
-/*
-    private void readDatabase() {  //READ DATA 1.using the firebase console 2.using get() method
-        db.collection("users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+    private void historyRecycler() {
+        ArrayList<String> dataSource = new ArrayList<>();
+        db = FirebaseFirestore.getInstance();
+        db.collection("HomePageData").document("HistoryRV").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if (task.isSuccessful()) {
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        Log.d(TAG, document.getId() + " => " + document.getData());
+                    DocumentSnapshot doc = task.getResult();
+                    Map<String, Object> allInformation = doc.getData();
+                    //to display the information in-order, sort the map keys
+                    List keys = new ArrayList(allInformation.keySet());
+                    Collections.sort(keys);
+                    for (Object key : keys) {
+                        dataSource.add(allInformation.get(key).toString());
                     }
                 } else {
                     Log.w(TAG, "Error getting documents.", task.getException());
                 }
             }
-        });
-    }
-*/
-
-    private void historyRecycler() {
-        ArrayList<String> dataSource;
-
-        //Setting the data source
-        dataSource = new ArrayList<>();
-        dataSource.add("Over a century, what began as a small girls’ school in Birzeit town has become the most prestigious Palestinian university, transforming Palestinian higher education through its impact on community awareness, culture, and resistance."
-                + "\n"
-                + "Birzeit University has been a thorn in the side of the occupation, insisting on playing its role of enlightenment and creating a multicultural Palestinian society on the campus grounds.");
-
-        db = FirebaseFirestore.getInstance();
-        db.collection("HomePageData").document("/HistoryRV").get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+        }).addOnFailureListener(new OnFailureListener() {
             @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                //City city = documentSnapshot.toObject(City.class);
+            public void onFailure(@NonNull Exception e) {
+                //print e.message();
             }
         });
-
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
         HistoryAdapter myRvAdapter = new HistoryAdapter(dataSource);
@@ -90,24 +103,45 @@ public class HomePage extends AppCompatActivity {
     }
 
     private void suggestionsRecycler() {
+        ArrayList<String> titlesData = new ArrayList<>();
+        ArrayList<String> descData = new ArrayList<>();
+        //ArrayList<Bitmap> imagesData = new ArrayList<>();
+        ArrayList<String> imagesData = new ArrayList<>();
 
-        ArrayList<String> titlesData;
-        ArrayList<String> descData;
-        ArrayList<Integer> imagesData = new ArrayList<>();
-        imagesData.add(R.drawable.doha_photo_pal_museum);
-        imagesData.add(R.drawable.doha_photo_najjad_zeenni);
-        imagesData.add(R.drawable.doha_photo_students_break);
+        // Create a Cloud Storage reference from the app
+        storage = FirebaseStorage.getInstance();
+        final long ONE_MEGABYTE = 1024 * 1024;
 
-        //Setting the data source
-        titlesData = new ArrayList<>();
-        titlesData.add("The Palestinian Museum");
-        titlesData.add("Najjad Zeenni IT of excellence building");
-        titlesData.add("Students Break Area");
+        db = FirebaseFirestore.getInstance();
+        db.collection("HomePageData").document("SuggestionsRV").collection("Suggestions").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    List<String> list = new ArrayList<>();
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        list.add(document.getId());
+                        titlesData.add(document.getString("title"));
+                        descData.add(document.getString("description"));
 
-        descData = new ArrayList<>();
-        descData.add("A Non-Governmental Association promotes Palestinian culture, presents new narratives, and provides creative spaces for educational programs and innovative research, fostering a vibrant local and international community.");
-        descData.add("Also known as the (Blue Dome) building. It is an innovation space within Birzeit University designed to nurture ideas and creativity and provide an environment which is conducive to creating new businesses or developing existing ones by providing a unique and highly flexible combination of business development processes, people, academia and infrastructure.");
-        descData.add("A Non-Governmental Association promotes Palestinian culture, presents new narratives, and provides creative spaces for educational programs and innovative research, fostering a vibrant local and international community.");
+                        String httpsReference = document.getString("imageRef");
+                        imagesData.add(httpsReference);
+                    /*    StorageReference file = storage.getReferenceFromUrl(httpsReference);
+                        file.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+                            @Override
+                            public void onSuccess(byte[] bytes) {
+                                Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                                imagesData.add(bmp);
+                            }
+                        });
+                        */
+
+                    }
+                    Log.d(TAG, list.toString());
+                } else {
+                    Log.d(TAG, "Error getting documents: ", task.getException());
+                }
+            }
+        });
 
         LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
         SuggestionsAdapter myRvAdapter2 = new SuggestionsAdapter(titlesData, descData, imagesData);
