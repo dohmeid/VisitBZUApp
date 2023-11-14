@@ -1,7 +1,6 @@
 package com.example.visitbzu.helpers;
 
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.example.visitbzu.R;
 
 import java.util.ArrayList;
@@ -21,9 +18,9 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
 
     ArrayList<String> titles;
     ArrayList<String> descriptions;
-    ArrayList<String> images;
+    ArrayList<Bitmap> images;
 
-    public SuggestionsAdapter(ArrayList<String> data1, ArrayList<String> data2, ArrayList<String> data3) {
+    public SuggestionsAdapter(ArrayList<String> data1, ArrayList<String> data2, ArrayList<Bitmap> data3) {
         this.titles = data1;
         this.descriptions = data2;
         this.images = data3;
@@ -33,30 +30,23 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
     @Override
     public SuggestionsAdapter.SuggestionsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.doha_home_page_suggestion_item, parent, false);
-        return new SuggestionsAdapter.SuggestionsHolder(view);
+        return new SuggestionsHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull SuggestionsAdapter.SuggestionsHolder holder, int position) {
         holder.title.setText(titles.get(position));
         holder.description.setText(descriptions.get(position));
-        //holder.image.setImageResource(images.get(position));
-       // holder.image.setImageURI(Uri.parse(images.get(position)));
         //holder.image.setImageBitmap(images.get(position));
-       // Glide.with(holder.image).load(images.get(position)).into(holder.image);
-
-        Glide.with(holder.image.getContext())
-                .load(images.get(position))
-                .into(holder.image);
-
     }
+
     @Override
     public int getItemCount() {
         return titles.size();
     }
 
 
-    class SuggestionsHolder extends RecyclerView.ViewHolder {
+    static class SuggestionsHolder extends RecyclerView.ViewHolder {
         TextView title;
         TextView description;
         ImageView image;

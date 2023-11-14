@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -20,6 +19,10 @@ import com.example.visitbzu.features.faq.sararom_FAQs;
 import com.example.visitbzu.features.libraries.SaraIssaLibraries;
 import com.example.visitbzu.features.map.sararom_Map;
 import com.example.visitbzu.features.prayers.SaraIssaPrayer;
+import com.example.visitbzu.features.virtualTour.VRButtons;
+import com.example.visitbzu.features.virtualTour.Vir2;
+import com.example.visitbzu.features.virtualTour.Virtual2;
+import com.example.visitbzu.features.virtualTour.Virtual3;
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
 import com.example.visitbzu.features.virtualTour.VirtualTour;
@@ -27,26 +30,22 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicMarkableReference;
 
 public class HomePage extends AppCompatActivity {
 
-    private FirebaseFirestore db;
-    private FirebaseStorage storage;
-    private StorageReference storageRef;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     //SearchView searchView;
     //ListView listView;
 
@@ -69,79 +68,93 @@ public class HomePage extends AppCompatActivity {
 
     private void historyRecycler() {
         ArrayList<String> dataSource = new ArrayList<>();
-        db = FirebaseFirestore.getInstance();
-        db.collection("HomePageData").document("HistoryRV").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot doc = task.getResult();
-                    Map<String, Object> allInformation = doc.getData();
-                    //to display the information in-order, sort the map keys
-                    List keys = new ArrayList(allInformation.keySet());
-                    Collections.sort(keys);
-                    for (Object key : keys) {
-                        dataSource.add(allInformation.get(key).toString());
-                    }
-                } else {
-                    Log.w(TAG, "Error getting documents.", task.getException());
+
+        //get the data from Firestore Storage
+        db.collection("HomePageData").document("HistoryRV").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot doc = task.getResult();
+                Map<String, Object> allInformation = doc.getData();
+                List keys = new ArrayList(allInformation.keySet()); //to display the information in-order, sort the map keys
+                Collections.sort(keys);
+                for (Object key : keys) {
+                    dataSource.add(allInformation.get(key).toString());
                 }
+            } else {
+                Log.w(TAG, "Error getting documents.", task.getException());
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                //print e.message();
-            }
-        });
+        }).addOnFailureListener(e -> Log.w(TAG, e.getMessage()));
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
         HistoryAdapter myRvAdapter = new HistoryAdapter(dataSource);
         historyRV.setLayoutManager(linearLayoutManager);
         historyRV.setAdapter(myRvAdapter);
-        //PagerSnapHelper helper = new PagerSnapHelper();
-        //helper.attachToRecyclerView(historyRV);
-        //historyRV.addItemDecoration(new CirclePagerIndicatorDecoration());
+        //PagerSnapHelper helper = new PagerSnapHelper();//helper.attachToRecyclerView(historyRV);//historyRV.addItemDecoration(new CirclePagerIndicatorDecoration());
     }
 
     private void suggestionsRecycler() {
         ArrayList<String> titlesData = new ArrayList<>();
         ArrayList<String> descData = new ArrayList<>();
-        //ArrayList<Bitmap> imagesData = new ArrayList<>();
-        ArrayList<String> imagesData = new ArrayList<>();
+        ArrayList<Bitmap> imagesData = new ArrayList<>();
 
         // Create a Cloud Storage reference from the app
-        storage = FirebaseStorage.getInstance();
+        FirebaseStorage storage = FirebaseStorage.getInstance();
+        StorageReference storageRef = storage.getReference();
+
         final long ONE_MEGABYTE = 1024 * 1024;
 
-        db = FirebaseFirestore.getInstance();
-        db.collection("HomePageData").document("SuggestionsRV").collection("Suggestions").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                if (task.isSuccessful()) {
-                    List<String> list = new ArrayList<>();
-                    for (QueryDocumentSnapshot document : task.getResult()) {
-                        list.add(document.getId());
-                        titlesData.add(document.getString("title"));
-                        descData.add(document.getString("description"));
+        StorageReference listRef = storageRef.child("SuggestionsRV_Images");
 
-                        String httpsReference = document.getString("imageRef");
-                        imagesData.add(httpsReference);
-                    /*    StorageReference file = storage.getReferenceFromUrl(httpsReference);
-                        file.getBytes(ONE_MEGABYTE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+       /* listRef.listAll().addOnCompleteListener(new OnCompleteListener<ListResult>() {
+            @Override
+            public void onComplete(@NonNull Task<ListResult> task) {
+
+                ListResult listResult = task.getResult();
+                for (StorageReference file : listResult.getItems()) {
+
+                    file.getBytes(ONE_MEGABYTE).addOnCompleteListener(new OnCompleteListener<byte[]>() {
+                        @Override
+                        public void onComplete(@NonNull Task<byte[]> task) {
+                            byte[] bytes = task.getResult();
+                            Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                            imagesData.add(bmp);
+
+                        }
+                    });
+                }
+            }
+        });
+        */
+
+        //get the data from Firestore Storage
+        db.collection("HomePageData").document("SuggestionsRV").get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    Map<String, Object> allSuggestions = document.getData();
+                    List keys = new ArrayList(allSuggestions.keySet()); //to display the information in-order, sort the map keys
+                    Collections.sort(keys);
+                    for (Object key : keys) {
+                        HashMap<String, Object> v = (HashMap<String, Object>) allSuggestions.get(key);
+                        titlesData.add(v.get("title").toString());
+                        descData.add(v.get("description").toString());
+
+                        String httpsReference = v.get("imageRef").toString();
+                        StorageReference file = storage.getReferenceFromUrl(httpsReference);
+                        file.getBytes(ONE_MEGABYTE).addOnCompleteListener(new OnCompleteListener<byte[]>() {
                             @Override
-                            public void onSuccess(byte[] bytes) {
+                            public void onComplete(@NonNull Task<byte[]> task) {
+                                byte[] bytes = task.getResult();
                                 Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                                 imagesData.add(bmp);
                             }
                         });
-                        */
-
                     }
-                    Log.d(TAG, list.toString());
-                } else {
-                    Log.d(TAG, "Error getting documents: ", task.getException());
                 }
+            } else {
+                Log.w(TAG, "Error getting documents.", task.getException());
             }
-        });
+        }).addOnFailureListener(e -> Log.w(TAG, e.getMessage()));
+
 
         LinearLayoutManager linearLayoutManager2 = new LinearLayoutManager(HomePage.this, LinearLayoutManager.HORIZONTAL, false);
         SuggestionsAdapter myRvAdapter2 = new SuggestionsAdapter(titlesData, descData, imagesData);
@@ -149,8 +162,11 @@ public class HomePage extends AppCompatActivity {
         suggestionsRV.setAdapter(myRvAdapter2);
     }
 
+
+    //This method is used to activate all features on their buttons in home page
     private void activateButtons() {
 
+        //--------------------Sara Isam features
         //Map feature
         mapBtn = findViewById(R.id.mapButton);
         mapBtn.setOnClickListener(view -> {
@@ -167,10 +183,21 @@ public class HomePage extends AppCompatActivity {
             finish();
         });
 
+        //--------------------Doha Hmeid features
+        //virtualTour feature
+        virTourBtn = findViewById(R.id.virtualTourButton);
+        virTourBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, VRButtons.class);
+            startActivity(i);
+            finish();
+        });
+
+        //--------------------Sara Issa features
         //prayers feature
-        prayersBtn = findViewById(R.id.prayersButton);
-        prayersBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, SaraIssaPrayer.class);
+        //faculties feature
+        facultiesBtn = findViewById(R.id.facultiesButton);
+        facultiesBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, SaraIssaFacultyOfInformationTechnology.class);
             startActivity(i);
             finish();
         });
@@ -183,18 +210,9 @@ public class HomePage extends AppCompatActivity {
             finish();
         });
 
-        //faculties feature
-        facultiesBtn = findViewById(R.id.facultiesButton);
-        facultiesBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, SaraIssaFacultyOfInformationTechnology.class);
-            startActivity(i);
-            finish();
-        });
-
-        //virtualTour feature
-        virTourBtn = findViewById(R.id.virtualTourButton);
-        virTourBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, VirtualTour.class);
+        prayersBtn = findViewById(R.id.prayersButton);
+        prayersBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, SaraIssaPrayer.class);
             startActivity(i);
             finish();
         });

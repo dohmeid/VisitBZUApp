@@ -38,7 +38,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
     }
 
 
-    class HistoryHolder extends RecyclerView.ViewHolder {
+    static class HistoryHolder extends RecyclerView.ViewHolder {
         TextView text;
 
         public HistoryHolder(@NonNull View itemView) {

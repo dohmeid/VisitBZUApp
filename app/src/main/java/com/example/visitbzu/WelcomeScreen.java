@@ -41,11 +41,10 @@ public class WelcomeScreen extends AppCompatActivity {
         });
 
         nextBtn.setOnClickListener(view -> {
-           // Intent i = new Intent(WelcomeScreen.this, HomePage.class);
+            // Intent i = new Intent(WelcomeScreen.this, HomePage.class);
             Intent i = new Intent(WelcomeScreen.this, HomePage.class);
             startActivity(i);
             finish();
         });
     }
-
 }
