@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".features.virtualTour.Virtual4">
 
+    <ListView
+        android:id="@+id/list2"
+        android:layout_width="300px"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"/>
+
     <com.google.vr.sdk.widgets.pano.VrPanoramaView
         android:id="@+id/vr"
-        android:layout_width="match_parent"
+        android:layout_width="550dp"
         android:layout_height="match_parent" />
 
 

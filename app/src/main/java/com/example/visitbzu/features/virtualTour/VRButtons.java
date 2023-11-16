@@ -14,7 +14,7 @@ import com.example.visitbzu.WelcomeScreen;
 
 public class VRButtons extends AppCompatActivity {
 
-    Button btn1,btn2,btn3,btn4;
+    Button btn1,btn2,btn3,btn4,btn5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +44,13 @@ public class VRButtons extends AppCompatActivity {
         btn4 = findViewById(R.id.button4);
         btn4.setOnClickListener(view -> {
             Intent i = new Intent(VRButtons.this, Virtual4.class);
+            startActivity(i);
+            finish();
+        });
+
+        btn5 = findViewById(R.id.button5);
+        btn5.setOnClickListener(view -> {
+            Intent i = new Intent(VRButtons.this, menu.class);
             startActivity(i);
             finish();
         });
