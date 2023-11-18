@@ -8,13 +8,10 @@ import android.widget.Toast;
 
 import com.google.vr.sdk.widgets.pano.VrPanoramaView;
 
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
-public class LoadPanoramaTask extends AsyncTask<String, Void, Bitmap> {
 
+public class LoadPanoramaTask extends AsyncTask<Integer, Void, Bitmap> {
     private static final String TAG = "LoadPanoramaTask";
     private VrPanoramaView vrPanoramaView;
 
@@ -23,24 +20,24 @@ public class LoadPanoramaTask extends AsyncTask<String, Void, Bitmap> {
     }
 
     @Override
-    protected Bitmap doInBackground(String... params) {
-        String imageUrl = params[0];
+    protected Bitmap doInBackground(Integer... params) {
+        int resourceId = params[0];
         try {
-            URL url = new URL(imageUrl);
-            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-            InputStream input = connection.getInputStream();
-            return BitmapFactory.decodeStream(input);
-        } catch (IOException e) {
+            InputStream inputStream = vrPanoramaView.getContext().getResources().openRawResource(resourceId);
+            return BitmapFactory.decodeStream(inputStream);
+        } catch (Exception e) {
             Log.e(TAG, "Error loading panorama image: " + e.getMessage());
             return null;
         }
     }
 
-    @Override
+
     protected void onPostExecute(Bitmap result) {
         if (result != null) {
             VrPanoramaView.Options options = new VrPanoramaView.Options();
             options.inputType = VrPanoramaView.Options.TYPE_MONO;
+            vrPanoramaView.setInfoButtonEnabled(false); //Set the button to hide the leftmost information
+            vrPanoramaView.setStereoModeButtonEnabled(false); //Set button to hide diorama
             vrPanoramaView.loadImageFromBitmap(result, options);
         } else {
             Toast.makeText(vrPanoramaView.getContext(), "Failed to load image", Toast.LENGTH_SHORT).show();

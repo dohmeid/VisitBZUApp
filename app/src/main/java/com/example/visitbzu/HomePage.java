@@ -19,21 +19,14 @@ import com.example.visitbzu.features.faq.sararom_FAQs;
 import com.example.visitbzu.features.libraries.SaraIssaLibraries;
 import com.example.visitbzu.features.map.sararom_Map;
 import com.example.visitbzu.features.prayers.SaraIssaPrayer;
-import com.example.visitbzu.features.virtualTour.VRButtons;
-import com.example.visitbzu.features.virtualTour.Vir2;
-import com.example.visitbzu.features.virtualTour.Virtual2;
-import com.example.visitbzu.features.virtualTour.Virtual3;
+import com.example.visitbzu.features.virtualTour.VirtualTour;
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
-import com.example.visitbzu.features.virtualTour.VirtualTour;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
@@ -187,7 +180,7 @@ public class HomePage extends AppCompatActivity {
         //virtualTour feature
         virTourBtn = findViewById(R.id.virtualTourButton);
         virTourBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, VRButtons.class);
+            Intent i = new Intent(HomePage.this, VirtualTour.class);
             startActivity(i);
             finish();
         });

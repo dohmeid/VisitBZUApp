@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,9 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisitBZU"
         tools:targetApi="31">
-        <activity
-            android:name=".features.virtualTour.menu"
-            android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -32,26 +30,9 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".features.virtualTour.Virtual4"
+            android:name=".features.virtualTour.VirtualTour"
             android:exported="false"
             android:screenOrientation="sensorLandscape" />
-        <activity
-            android:name=".features.virtualTour.VRButtons"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".features.virtualTour.Vir2"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".features.virtualTour.Virtual3"
-            android:exported="false"
-            android:label="@string/title_activity_virtual3"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".features.virtualTour.Virtual2"
-            android:exported="false"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".features.faq.sararom_FAQs"
             android:screenOrientation="portrait" />
@@ -91,7 +72,7 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".features.virtualTour.VirtualTour"
+            android:name=".features.virtualTour.ApiVirtualTour"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity

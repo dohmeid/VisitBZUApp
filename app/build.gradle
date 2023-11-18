@@ -49,14 +49,6 @@ dependencies {
     //virtual tour dependencies
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.vr:sdk-panowidget:1.180.0'
-    //implementation 'com.google.vr:sdk-panowidget:1.200.0'
-    //implementation 'com.google.vr:sdk-base:1.160.0'
-    //implementation 'com.google.vr:sdk:1.220.0'
-    //implementation 'com.google.vr:cardboard:1.5.0'
-    //implementation 'com.google.android.exoplayer:extension-gvr:2.15.1'
-    //implementation 'com.github.googlevr.cardboard'
-    implementation 'com.google.android.gms:play-services-panorama-license:12.0.1'
-    implementation 'com.google.android.gms:play-services-panorama:17.1.0'
 
     //firebase dependencies
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
