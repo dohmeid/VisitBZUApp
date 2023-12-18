@@ -2,21 +2,50 @@
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="165dp"
-    android:layout_height="60dp"
+    android:layout_width="195dp"
+    android:layout_height="70dp"
     android:backgroundTint="#F7FFF5"
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="5dp"
     app:strokeColor="#B3214515"
-    app:strokeWidth="2dp">
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp">
 
     <TextView
-        android:id="@+id/textViewItem"
+        android:id="@+id/nameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/montserrat_bold"
-        android:text="Birzeit university"
+        android:layout_gravity="left"
+        android:fontFamily="@font/montserrat"
+        android:text="Naseeb Azeez Shaheen Building"
         android:textColor="#B3214515"
-        android:textSize="13sp" />
+        android:textSize="10sp"
+        android:paddingBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/facultyViewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Graduate Studies Building"
+        android:textColor="#B3214515"
+        android:textSize="8sp" />
+    <TextView
+        android:id="@+id/codeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="N.SHAHEEN"
+        android:textColor="#B3214515"
+        android:textSize="8sp" />
+
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

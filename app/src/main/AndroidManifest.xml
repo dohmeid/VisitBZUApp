@@ -72,10 +72,6 @@
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".features.virtualTour.ApiVirtualTour"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".HomePage"
             android:exported="false"
             android:screenOrientation="portrait" />

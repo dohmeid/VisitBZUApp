@@ -1,109 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".features.virtualTour.VirtualTour">
-
-    <com.google.vr.sdk.widgets.pano.VrPanoramaView
-        android:id="@+id/vrView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/toggleButton1"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:background="@drawable/doha_border_message"
-        android:checked="false"
-        android:drawableStart="@drawable/doha_vector_list"
-        android:drawableTint="#2B581C"
-        android:padding="9dp"
-        android:text=""
-        android:textOff=" "
-        android:textOn=" "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="185dp"
+        android:layout_width="205dp"
         android:layout_height="match_parent"
         android:background="#B3FFFFFF"
         android:divider="#00FFFFFF"
-        android:dividerHeight="5sp"
-        android:paddingLeft="8dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:scrollbarThumbVertical="@color/sararom_map_color"
+        android:dividerHeight="2sp"
+        android:padding="2dp"
+        android:scrollbarThumbVertical="@color/dark_green"
+        android:scrollbarSize="2dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0."
         tools:listitem="@layout/doha_virtual_tour_list_item" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        android:background="@drawable/doha_border_message"
-        android:checked="false"
-        android:drawableStart="@drawable/doha_vector_message_icon_selector"
-        android:drawableTint="#CC2B581C"
-        android:padding="9dp"
-        android:text=""
-        android:textOff=" "
-        android:textOn=" "
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.98"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.20" />
-
-    <ScrollView
-        android:id="@+id/descriptionView"
-        android:layout_width="250dp"
-        android:layout_height="125dp"
-        android:background="@drawable/doha_border_scrollview"
-        android:fillViewport="true"
-        android:paddingLeft="5sp"
-        android:paddingTop="10sp"
-        android:paddingRight="5sp"
-        android:paddingBottom="10sp"
-        android:scrollbarTrackVertical="@color/white"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.500"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.950">
-
-        <TextView
-            android:id="@+id/description"
+        <com.google.vr.sdk.widgets.pano.VrPanoramaView
+            android:id="@+id/vrView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/open_sans"
-            android:gravity="center"
-            android:lineSpacingExtra="4dp"
-            android:text="building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
-    </ScrollView>
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+        </com.google.vr.sdk.widgets.pano.VrPanoramaView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ScrollView
+            android:id="@+id/descriptionView"
+            android:layout_width="500dp"
+            android:layout_height="100dp"
+            android:background="@drawable/doha_border_scrollview"
+            android:fillViewport="true"
+            android:paddingLeft="3sp"
+            android:paddingRight="3sp"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:scrollbarTrackVertical="@color/white"
+            android:scrollbarSize="2dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.297"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.98">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:gravity="center"
+                android:lineSpacingExtra="3dp"
+                android:text="building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5 building5"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+        </ScrollView>
+
+        <ToggleButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/doha_border_message"
+            android:checked="false"
+            android:drawableStart="@drawable/sara_issa_arrow_forward"
+            android:drawableTint="#2B581C"
+            android:padding="9dp"
+            android:text=""
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.03"/>
+
+        <ToggleButton
+            android:id="@+id/listButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/doha_border_message"
+            android:checked="false"
+            android:drawableStart="@drawable/doha_vector_list"
+            android:drawableTint="#2B581C"
+            android:padding="9dp"
+            android:text=""
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.155" />
+
+        <ToggleButton
+            android:id="@+id/descriptionButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/doha_border_message"
+            android:checked="false"
+            android:drawableStart="@drawable/doha_vector_message_icon_selector"
+            android:drawableTint="#CC2B581C"
+            android:padding="9dp"
+            android:text=""
+            android:textOff=" "
+            android:textOn=" "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.280" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
 
