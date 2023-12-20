@@ -457,6 +457,121 @@
                         app:strokeWidth="2dp" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/ritajButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Ritaj"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/doha_icon_bzu_logo"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/itcButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="ITC"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/itc_icon"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/facebookButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Facebook"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/facebook"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/instagramButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="95dp"
+                        android:layout_height="80dp"
+                        android:layout_margin="0dp"
+                        android:backgroundTint="@color/white"
+                        android:fontFamily="@font/montserrat"
+                        android:includeFontPadding="false"
+                        android:padding="0dp"
+                        android:text="Instagram"
+                        android:textAllCaps="false"
+                        android:textColor="#2B581C"
+                        android:textSize="11sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/instagram"
+                        app:iconGravity="textTop"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="#A8CC9B"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout

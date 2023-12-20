@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "428255786451",
+    "firebase_url": "https://visitbzu-default-rtdb.firebaseio.com",
     "project_id": "visitbzu",
     "storage_bucket": "visitbzu.appspot.com"
   },

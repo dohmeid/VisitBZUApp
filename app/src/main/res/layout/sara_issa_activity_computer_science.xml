@@ -5,14 +5,14 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SaraIssaMainActivity">
+    tools:context=".features.faculties.facultyOfInformationTechnology.SaraIssaComputerScience">
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginTop="-130dp"
-        android:background="@drawable/sara_issa_circle"
+        android:background="@drawable/sara_issa_circle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,17 +22,17 @@
         android:layout_height="250dp"
         android:layout_marginStart="-130dp"
         android:layout_marginTop="-30dp"
-        android:background="@drawable/sara_issa_circle"
+        android:background="@drawable/sara_issa_circle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cyberSecurity"
+        android:id="@+id/titleValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="80dp"
-        android:text="Computer Science"
+        android:text="title"
         android:textColor="#000"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -40,12 +40,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/desCyberSecurity"
+        android:id="@+id/descriptionValue"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="195dp"
-        android:text="The mission of the Computer Science program is to provide students with excellent up-to-date knowledge in the fields related to computer science and information technology. This is achieved through comprehensive and continuously reviewed educational programs, research projects, and new tracks to fulfill the growing needs of certain and new skills in the field of computing."
+        android:layout_marginTop="200dp"
+        android:text="description"
         android:textColor="#000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="480dp"
         android:text="Type:"
         android:textColor="#000"
         android:textSize="22sp"
@@ -68,18 +68,18 @@
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginTop="460dp"
         android:background="@drawable/sara_issa_rectangle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/master"
+        android:id="@+id/typeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="240dp"
-        android:layout_marginTop="455dp"
-        android:text="Bachelor"
+        android:layout_marginTop="475dp"
+        android:text="type"
         android:textColor="#000"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginTop="540dp"
         android:text="Department:"
         android:textColor="#000"
         android:textSize="22sp"
@@ -102,18 +102,18 @@
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="510dp"
+        android:layout_marginTop="530dp"
         android:background="@drawable/sara_issa_rectangle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/www"
+        android:id="@+id/departmentValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="210dp"
-        android:layout_marginTop="525dp"
-        android:text="Computer Science"
+        android:layout_marginTop="545dp"
+        android:text="department"
         android:textColor="#000"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="595dp"
+        android:layout_marginTop="615dp"
         android:text="Credit Hours:"
         android:textColor="#000"
         android:textSize="22sp"
@@ -136,18 +136,18 @@
         android:layout_width="170dp"
         android:layout_height="60dp"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="580dp"
+        android:layout_marginTop="600dp"
         android:background="@drawable/sara_issa_rectangle2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/numOfHours"
+        android:id="@+id/hoursValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="595dp"
-        android:text="129"
+        android:layout_marginTop="615dp"
+        android:text="hours"
         android:textColor="#000"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,14 +155,31 @@
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="65dp"
+        android:layout_height="48dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="670dp"
-        android:backgroundTint="#B891C280"
-        android:contentDescription="Back Button"
-        android:drawableLeft="@drawable/sara_issa_arrow_back"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#66A8CC9B"
+        android:paddingStart="0dp"
+        android:paddingLeft="0dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp"
+        app:cornerRadius="10dp"
+        app:icon="@drawable/sara_issa_arrow_back"
+        app:iconGravity="textTop"
+        app:iconPadding="0dp"
+        app:iconSize="30dp"
+        app:iconTint="#2B581C"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.980"
+        app:strokeColor="#66A8CC9B"
+        app:strokeWidth="1dp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

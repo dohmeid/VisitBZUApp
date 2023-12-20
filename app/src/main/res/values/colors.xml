@@ -5,4 +5,7 @@
     <color name="sararom_lite_green">#262B581C</color>
     <color name="sararom_map_color">#91C280</color>
     <color name="sararom_map_top">#D9D9D9</color>
+    <color name="dark_green">#D90E4015</color>
+    <color name="light_green">#B891C280</color>
+    <color name="dark_green_2">#0E4015</color>
 </resources>

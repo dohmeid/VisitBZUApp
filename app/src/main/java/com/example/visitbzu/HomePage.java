@@ -8,14 +8,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.example.visitbzu.features.faculties.SaraIssaFacultyOfInformationTechnology;
+import com.example.visitbzu.features.faculties.SaraIssaFaculties;
 import com.example.visitbzu.features.faq.sararom_FAQs;
-import com.example.visitbzu.features.libraries.SaraIssaLibraries;
+import com.example.visitbzu.features.librariesandmuseums.LibrariesAndMuseumsViewAll;
 import com.example.visitbzu.features.map.sararom_Map;
+import com.example.visitbzu.features.parkingAndTransportationServices.ParkingActivity;
 import com.example.visitbzu.features.prayers.SaraIssaPrayer;
 import com.example.visitbzu.helpers.HistoryAdapter;
 import com.example.visitbzu.helpers.SuggestionsAdapter;
 import com.example.visitbzu.features.virtualTour.VirtualTour;
+import com.example.visitbzu.socialmedia.Facebook;
+import com.example.visitbzu.socialmedia.Instagram;
+import com.example.visitbzu.socialmedia.Website;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -28,7 +32,7 @@ public class HomePage extends AppCompatActivity {
     //SearchView searchView;
     //ListView listView;
 
-    Button mapBtn, virTourBtn, faqsBtn, prayersBtn, facultiesBtn, museumsLibrariesBtn;
+    Button mapBtn, virTourBtn, faqsBtn, prayersBtn, facultiesBtn, museumsLibrariesBtn, parkingBtn,ritajButton, itcButton, facebookButton, instagramButton;
     RecyclerView historyRV, suggestionsRV;
 
 
@@ -144,7 +148,7 @@ public class HomePage extends AppCompatActivity {
         //museums & Libraries feature
         museumsLibrariesBtn = findViewById(R.id.museumsLibrariesButton);
         museumsLibrariesBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, SaraIssaLibraries.class);
+            Intent i = new Intent(HomePage.this, LibrariesAndMuseumsViewAll.class);
             startActivity(i);
             finish();
         });
@@ -152,7 +156,15 @@ public class HomePage extends AppCompatActivity {
         //faculties feature
         facultiesBtn = findViewById(R.id.facultiesButton);
         facultiesBtn.setOnClickListener(view -> {
-            Intent i = new Intent(HomePage.this, SaraIssaFacultyOfInformationTechnology.class);
+            Intent i = new Intent(HomePage.this, SaraIssaFaculties.class);
+            startActivity(i);
+            finish();
+        });
+
+        //parking feature
+        parkingBtn = findViewById(R.id.parkingButton);
+        parkingBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, ParkingActivity.class);
             startActivity(i);
             finish();
         });
@@ -163,6 +175,30 @@ public class HomePage extends AppCompatActivity {
             Intent i = new Intent(HomePage.this, VirtualTour.class);
             startActivity(i);
             finish();
+        });
+
+        // Ritaj page
+        ritajButton = findViewById(R.id.ritajButton);
+        ritajButton.setOnClickListener(view -> {
+            Website.openWebsite(this, "https://ritaj.birzeit.edu/");
+        });
+
+        // itc page
+        itcButton = findViewById(R.id.itcButton);
+        itcButton.setOnClickListener(view -> {
+            Website.openWebsite(this, "https://itc.birzeit.edu/");
+        });
+
+        // facebook page
+        facebookButton = findViewById(R.id.facebookButton);
+        facebookButton.setOnClickListener(view -> {
+            Facebook.openFacebookProfile(this, "BirzeitUniversity");
+        });
+
+        // instagram page
+        instagramButton = findViewById(R.id.instagramButton);
+        instagramButton.setOnClickListener(view -> {
+            Instagram.openInstagramAccount(this, "birzeit.university");
         });
     }
 

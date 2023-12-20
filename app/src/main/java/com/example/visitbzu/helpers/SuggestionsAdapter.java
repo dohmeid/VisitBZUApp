@@ -52,7 +52,7 @@ public class SuggestionsAdapter extends RecyclerView.Adapter<SuggestionsAdapter.
 
         public SuggestionsHolder(@NonNull View itemView) {
             super(itemView);
-            title = itemView.findViewById(R.id.title);
+            title = itemView.findViewById(R.id.titleValue);
             description = itemView.findViewById(R.id.description);
             image = itemView.findViewById(R.id.image);
         }

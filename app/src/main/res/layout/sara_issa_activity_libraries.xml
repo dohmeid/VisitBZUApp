@@ -7,6 +7,7 @@
     android:layout_height="wrap_content"
     tools:context=".features.prayers.SaraIssaPrayer">
 
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="250dp"
@@ -35,18 +36,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/libraries"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="0dp"
-            android:text="Libraries"
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/sara_issa_arrow_back"
+                android:drawableTint="#000"
+                android:textAlignment="center"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/libraries"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:text="Libraries"
+                android:textColor="#000"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/view_all"
@@ -87,65 +103,28 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/library1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
+                    android:id="@+id/yusuf_ahmad_alghanim_library"
+                    android:layout_width="450dp"
+                    android:layout_height="650dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
                     android:background="@drawable/sara_issa_main_library"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <Button
-                    android:id="@+id/btnMainLibrary"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="250dp"
-                    android:backgroundTint="#B891C280"
-                    android:drawableRight="@drawable/sara_issa_arrow_forward"
-                    android:padding="15dp"
-                    android:text="Main Library"
-                    android:textColor="#2B581C"
-                    android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.85" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/library2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/sara_issa_main_library"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <Button
-                    android:id="@+id/btnMainLibrary2"
+                    android:id="@+id/btn1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="250dp"
                     android:backgroundTint="#B891C280"
                     android:drawableRight="@drawable/sara_issa_arrow_forward"
                     android:padding="15dp"
-                    android:text="Main Library"
+                    android:text="Yusuf Ahmad Al Ghanim Library"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -154,7 +133,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.85" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -162,27 +140,28 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/library3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
+                    android:id="@+id/said_khoury_library_for_development_studies"
+                    android:layout_width="450dp"
+                    android:layout_height="650dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginEnd="20dp"
-                    android:background="@drawable/sara_issa_main_library"
+                    android:background="@drawable/sara_issa_said_khoury_library"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <Button
-                    android:id="@+id/btnMainLibrary3"
+                    android:id="@+id/btn2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="250dp"
                     android:backgroundTint="#B891C280"
                     android:drawableRight="@drawable/sara_issa_arrow_forward"
                     android:padding="15dp"
-                    android:text="Main Library"
+                    android:text="Said Khoury Library"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     android:textStyle="bold"
@@ -191,21 +170,45 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.85" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/the_institute_of_law_library"
+                    android:layout_width="450dp"
+                    android:layout_height="650dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/the_institute_of_law_library"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="250dp"
+                    android:backgroundTint="#B891C280"
+                    android:drawableRight="@drawable/sara_issa_arrow_forward"
+                    android:padding="15dp"
+                    android:text="The Institute Of Law Library"
+                    android:textColor="#2B581C"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.85" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/btnBack"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="670dp"
-        android:backgroundTint="#B891C280"
-        android:contentDescription="Back Button"
-        android:drawableLeft="@drawable/sara_issa_arrow_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

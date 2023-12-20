@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,12 +18,63 @@
         android:theme="@style/Theme.VisitBZU"
         tools:targetApi="31">
         <activity
-            android:name=".GetStartedPage"
+            android:name=".features.parkingAndTransportationServices.BusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.parkingAndTransportationServices.TaxiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.parkingAndTransportationServices.CarParkingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.parkingAndTransportationServices.ParkingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.HistoryBirzeitUniversityMuseum"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.AboutBirzeitUniversityMuseum"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.LibrariesAndMuseumsViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.SaraIssaMuseums"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.BirzeitUniversityMuseum"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.TheInstituteOfLawLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.SaidKhouryLibraryForDevelopmentStudies"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.YusufAhmadAlGhanimLibrary"
+            android:exported="false" />
+        <activity
+            android:name=".features.prayers.SaraIssaPrayersViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".features.librariesandmuseums.SaraIssaLibrariesViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".features.faculties.SaraIssaFacultiesViewAll"
+            android:exported="false" />
+        <activity
+            android:name=".features.faculties.SaraIssaFaculties"
             android:exported="false" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAekxTHTclJsHVgiEGK2aTW3aWypdmMPTU" />
+            android:value="AIzaSyDwjxiCNkN4ClPEufaF0zZPzHFG7gXdgWo" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" /> <!-- <meta-data -->
+        <!-- android:name="com.google.android.geo.API_KEY" -->
+        <!-- android:value="AIzaSyAekxTHTclJsHVgiEGK2aTW3aWypdmMPTU" /> -->
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -26,28 +82,28 @@
         <activity android:name=".features.faq.sararom_FAQs" />
         <activity android:name=".features.map.sararom_Map" />
         <activity
-            android:name=".features.libraries.SaraIssaLibraries"
+            android:name=".features.librariesandmuseums.SaraIssaLibraries"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaCyberSecurity"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaCyberSecurity"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaComputerEngineeringMaster"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaComputerEngineeringMaster"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaElectricalEngineering"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaElectricalEngineering"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaComputerScience"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaComputerScience"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaComputerEngineering"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaComputerEngineering"
             android:exported="false" />
         <activity
             android:name=".features.prayers.SaraIssaPrayer"
             android:exported="false" />
         <activity
-            android:name=".features.faculties.SaraIssaFacultyOfInformationTechnology"
+            android:name=".features.faculties.facultyOfInformationTechnology.SaraIssaFacultyOfInformationTechnology"
             android:exported="false" />
         <activity
             android:name=".features.virtualTour.VirtualTour"

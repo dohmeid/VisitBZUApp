@@ -246,9 +246,6 @@ public class sararom_Map extends AppCompatActivity implements OnMapReadyCallback
         sararom_faculties.add(new sararom_Marker(new LatLng(31.961013, 35.183426),"مبنى سعيد خوري للتنمية"));
         sararom_faculties.add(new sararom_Marker(new LatLng(31.958335, 35.182582),"مبنى نسيب عزيز شاهين للدراسات العليا"));
         sararom_faculties.add(new sararom_Marker(new LatLng(31.961576, 35.182348),"مبنى شوقي شاهين"));
-
-
-
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {

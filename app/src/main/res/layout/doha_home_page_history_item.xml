@@ -19,7 +19,7 @@
             android:src="@drawable/doha_photo_bzu_history"  />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/titleValue"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"

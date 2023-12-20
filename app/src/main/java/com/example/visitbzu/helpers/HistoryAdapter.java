@@ -43,7 +43,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
 
         public HistoryHolder(@NonNull View itemView) {
             super(itemView);
-            text = itemView.findViewById(R.id.title);
+            text = itemView.findViewById(R.id.titleValue);
         }
     }
 

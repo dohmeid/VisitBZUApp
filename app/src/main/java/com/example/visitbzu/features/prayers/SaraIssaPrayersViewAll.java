@@ -1,4 +1,4 @@
-package com.example.visitbzu.features.libraries;
+package com.example.visitbzu.features.prayers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.visitbzu.R;
 
-public class SaraIssaLibraries extends AppCompatActivity {
+public class SaraIssaPrayersViewAll extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sara_issa_activity_libraries);
+        setContentView(R.layout.activity_sara_issa_prayers_view_all);
     }
 }

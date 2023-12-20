@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.faculties.SaraIssaFacultyOfInformationTechnology">
+    tools:context=".features.faculties.facultyOfInformationTechnology.SaraIssaFacultyOfInformationTechnology">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/masri"
+                android:id="@+id/yusuf_ahmad_alghanim_library"
                 android:layout_width="450dp"
                 android:layout_height="300dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -53,34 +53,34 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/Faculty_of_Information_Technology"
+                    android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
-                    android:text="Faculty of Information Technology"
+                    android:text="name"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/Munib_Rashid_Masri"
+                    android:id="@+id/founder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
-                    android:text="Munib Rashid Masri - Masri"
+                    android:text="founder"
                     android:textColor="#FFFFFF"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/info"
+                    android:id="@+id/description"
                     android:layout_width="250dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="30dp"
-                    android:text="Established in 2013 with the support of Munib Masri Foundation, the building consists of five floors with a total area of 4,232 sq. meters."
+                    android:text="description"
                     android:textColor="#FFFFFF"
                     android:textSize="15sp" />
 
@@ -131,12 +131,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/cse"
+                android:id="@+id/title1"
                 android:layout_width="105dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="660dp"
-                android:text="Computer Systems Engineering"
+                android:text="title"
                 android:textColor="#000"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -145,12 +145,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/bachelor1"
+                android:id="@+id/type1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="690dp"
-                android:text="Bachelor"
+                android:text="type"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -179,12 +179,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/ee"
+                android:id="@+id/title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="150dp"
                 android:layout_marginTop="670dp"
-                android:text="Electrical Engineering"
+                android:text="title"
                 android:textColor="#000"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -193,12 +193,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/bachelor2"
+                android:id="@+id/type2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="185dp"
                 android:layout_marginTop="690dp"
-                android:text="Bachelor"
+                android:text="type"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -229,12 +229,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/cs"
+                android:id="@+id/title3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="230dp"
                 android:layout_marginTop="670dp"
-                android:text="Computer Science"
+                android:text="title"
                 android:textColor="#000"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -243,12 +243,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/bachelor3"
+                android:id="@+id/type3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-50dp"
                 android:layout_marginTop="690dp"
-                android:text="Bachelor"
+                android:text="type"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -279,24 +279,24 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/csNew"
+                android:id="@+id/title4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="820dp"
                 android:layout_marginEnd="245dp"
-                android:text="Cyber Security"
+                android:text="title"
                 android:textColor="#000"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/bachelor4"
+                android:id="@+id/type4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-530dp"
                 android:layout_marginTop="840dp"
-                android:text="Bachelor"
+                android:text="type"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -327,12 +327,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/ce"
+                android:id="@+id/title5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="225dp"
                 android:layout_marginTop="820dp"
-                android:text="Computer Engineering"
+                android:text="title"
                 android:textColor="#000"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -341,12 +341,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/ceMaster"
+                android:id="@+id/type5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="-50dp"
                 android:layout_marginTop="840dp"
-                android:text="Master"
+                android:text="type"
                 android:textColor="#FFF"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
