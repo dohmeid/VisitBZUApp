@@ -51,10 +51,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="55dp"
                         android:fontFamily="@font/montserrat"
-                        android:text="HELLO, GUEST!"
+                        android:text="@string/hello_guest"
                         android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="10sp"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.049"
@@ -81,17 +81,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat_bold"
                             android:letterSpacing="0.1"
-                            android:text="BIRZEIT "
-                            android:textColor="@color/white"
-                            android:textSize="15sp" />
-
-                        <TextView
-                            android:id="@+id/text2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
-                            android:letterSpacing="0.1"
-                            android:text="UNIVERSITY"
+                            android:text="@string/birzeit_university"
                             android:textColor="@color/white"
                             android:textSize="15sp" />
 
@@ -113,9 +103,11 @@
                     android:layout_height="55dp"
                     android:background="@drawable/doha_border_searchview"
                     android:color="#2B581C"
+                    android:layoutDirection="locale"
+                    android:textDirection="locale"
                     android:theme="@style/ThemeOverlay.SearchView"
                     app:iconifiedByDefault="false"
-                    app:queryHint="I am looking for ..." />
+                    app:queryHint="@string/search_hint" />
 
                 <View
                     android:layout_width="390dp"
@@ -148,7 +140,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Map"
+                        android:text="@string/map"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -176,7 +168,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Virtual Tour"
+                        android:text="@string/virtual_tour"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -204,7 +196,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Faculties"
+                        android:text="@string/faculties"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -234,7 +226,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="true"
                         android:padding="0dp"
-                        android:text="Student’s Council"
+                        android:text="@string/stu_council"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -266,7 +258,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Registration"
+                        android:text="@string/registration"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -295,7 +287,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Health Care"
+                        android:text="@string/health_care"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -324,7 +316,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Cafeterias"
+                        android:text="@string/cafeterias"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -353,7 +345,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Museums &amp; Libraries"
+                        android:text="@string/museums_libraries"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -385,7 +377,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Prayers"
+                        android:text="@string/prayers"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -414,7 +406,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="Parking &amp; Transportation Services"
+                        android:text="@string/parking_transportation"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -443,7 +435,7 @@
                         android:fontFamily="@font/montserrat"
                         android:includeFontPadding="false"
                         android:padding="0dp"
-                        android:text="FAQS"
+                        android:text="@string/faqs"
                         android:textAllCaps="false"
                         android:textColor="#2B581C"
                         android:textSize="11sp"
@@ -476,7 +468,7 @@
                         android:id="@+id/view1"
                         android:layout_width="100dp"
                         android:layout_height="1.5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:layout_weight="1"
                         android:background="#2B581C" />
 
@@ -485,7 +477,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="History Surrounds You"
+                        android:text="@string/history_heading"
                         android:textColor="#2B581C"
                         android:textSize="12sp" />
 
@@ -493,7 +485,7 @@
                         android:id="@+id/view2"
                         android:layout_width="100dp"
                         android:layout_height="1.5dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="#2B581C" />
 
@@ -525,7 +517,7 @@
                         android:id="@+id/view3"
                         android:layout_width="100dp"
                         android:layout_height="1.5dp"
-                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp"
                         android:layout_weight="1"
                         android:background="#2B581C" />
 
@@ -534,7 +526,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Explore Campus"
+                        android:text="@string/suggestions_heading"
                         android:textColor="#2B581C"
                         android:textSize="12sp" />
 
@@ -542,7 +534,7 @@
                         android:id="@+id/view4"
                         android:layout_width="100dp"
                         android:layout_height="1.5dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:background="#2B581C" />
 
@@ -554,7 +546,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/open_sans"
-                    android:text="We recommend that you spend some time exploring our beautiful campus. Here are some places you should not miss."
+                    android:text="@string/suggestions_text"
                     android:textAlignment="center"
                     android:textColor="#2B581C"
                     android:textSize="10sp" />

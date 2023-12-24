@@ -28,7 +28,6 @@ public class sararom_FAQs extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(sararom_FAQs.this, HomePage.class));
-
             }
         });
         initData();

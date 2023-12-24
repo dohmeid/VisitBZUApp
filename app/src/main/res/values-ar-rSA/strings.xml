@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VisitBZU</string>
+
+    <!-- Strings used for home page translation "@string/map" -->
+    <string name="birzeit_university">جامعة بيرزيت</string>
+    <string name="hello_guest">مرحبا بك</string>
+
+    <string name="search_hint">أنا أبحث عن ...</string>
+
+    <!-- home page buttons -->
+    <string name="map">الخريطة</string>
+    <string name="virtual_tour">جولة افتراضية</string>
+    <string name="faculties">الكليات</string>
+    <string name="stu_council">مجلس الطلبة</string>
+    <string name="registration">قسم التسجيل</string>
+    <string name="health_care">العيادة الطبية</string>
+    <string name="cafeterias">الكافيتريات</string>
+    <string name="museums_libraries">المكتبات والمتاحف</string>
+    <string name="prayers">المصليات</string>
+    <string name="parking_transportation">خدمات النقل ومواقف السيارات</string>
+    <string name="faqs">الأسئلة الشائعة</string>
+
+    <string name="history_heading">التاريخ يحيط بك</string>
+    <string name="suggestions_heading">استكشف الحرم الجامعي</string>
+    <string name="suggestions_text">ننصحك بقضاء بعض الوقت في استكشاف حرمنا الجامعي الجميل. إليك بعض الأماكن التي يجب ألا تفوتها.</string>
+
+</resources>

@@ -87,24 +87,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.03"/>
 
-        <ToggleButton
-            android:id="@+id/listButton"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@drawable/doha_border_message"
-            android:checked="false"
-            android:drawableStart="@drawable/doha_vector_list"
-            android:drawableTint="#2B581C"
-            android:padding="9dp"
-            android:text=""
-            android:textOff=" "
-            android:textOn=" "
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.985"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.155" />
 
         <ToggleButton
             android:id="@+id/descriptionButton"
@@ -112,9 +94,9 @@
             android:layout_height="40dp"
             android:background="@drawable/doha_border_message"
             android:checked="false"
-            android:drawableStart="@drawable/doha_vector_message_icon_selector"
+            android:drawableStart="@drawable/quantum_ic_info_white_24"
             android:drawableTint="#CC2B581C"
-            android:padding="9dp"
+            android:padding="8dp"
             android:text=""
             android:textOff=" "
             android:textOn=" "
@@ -123,7 +105,7 @@
             app:layout_constraintHorizontal_bias="0.985"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.280" />
+            app:layout_constraintVertical_bias="0.160" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,9 +1,13 @@
 package com.example.visitbzu.features.virtualTour;
 
+import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +23,8 @@ import android.widget.ToggleButton;
 
 import com.example.visitbzu.HomePage;
 import com.example.visitbzu.R;
+import com.example.visitbzu.features.faq.sararom_FAQs;
+import com.example.visitbzu.helpers.HistoryAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -33,6 +39,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale;
 
 public class VirtualTour extends AppCompatActivity {
 
@@ -40,9 +47,10 @@ public class VirtualTour extends AppCompatActivity {
     private int lastClickedPosition = -1; //variable to store the last clicked item from the listView
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    String language; //save the app language here
 
     ListView tourList;
-    ToggleButton listBtn, descriptionBtn, backBtn;
+    ToggleButton descriptionBtn, backBtn;
     TextView descriptionText;
     ScrollView descriptionView;
     VrPanoramaView virtualView;
@@ -59,12 +67,17 @@ public class VirtualTour extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.doha_virtual_tour);
 
+        //get the selectedLanguage from SharedPreferences and print it to debug
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        language = sh.getString("AppLanguage", "");
+        Log.d(TAG, "--------------language " + language);
+
+
         virtualView = (VrPanoramaView) findViewById(R.id.vrView);
         descriptionView = findViewById(R.id.descriptionView);
         descriptionText = findViewById(R.id.description);
         backBtn = findViewById(R.id.backButton);
         descriptionBtn = findViewById(R.id.descriptionButton);
-        listBtn = findViewById(R.id.listButton);
         tourList = findViewById(R.id.list);
 
         getImages(); //fetch the images from firebase cloud
@@ -99,7 +112,12 @@ public class VirtualTour extends AppCompatActivity {
             isSorted = true;
         }
 
-        descriptionText.setText(buildingList.get(i).getDescriptionEN());
+        if (language.equals("ar")) {
+            descriptionText.setText(buildingList.get(i).getDescriptionAR());
+        } else {
+            descriptionText.setText(buildingList.get(i).getDescriptionEN());
+        }
+
         String selectedPhotoUrl = getSelectedPhotoUrl(i);
         new LoadPanoramaTask(virtualView).execute(selectedPhotoUrl); //loadPhotoSphere on the background thread
         lastClickedPosition = i;
@@ -108,17 +126,6 @@ public class VirtualTour extends AppCompatActivity {
 
     //This function is used to activate all the tour settings buttons
     private void activateButtons() {
-        //hide or show the buildings list
-        listBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (listBtn.isChecked()) {
-                    tourList.setVisibility(View.VISIBLE); // Show the description view
-                } else {
-                    tourList.setVisibility(View.INVISIBLE); // Hide the description view
-                }
-            }
-        });
 
         //hide or show the building description
         descriptionBtn.setOnClickListener(new View.OnClickListener() {
@@ -136,12 +143,16 @@ public class VirtualTour extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+
                 Intent i = new Intent(VirtualTour.this, HomePage.class);
                 startActivity(i);
-                finish();
             }
         });
     }
+
+
 
 
     //function to get the data from Firestore Storage
