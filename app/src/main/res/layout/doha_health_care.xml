@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".features.healthCare.HealthCare">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#FFFFFF"
+        app:srcCompat="@drawable/doha_vector_back" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:letterSpacing="0.1"
+                android:text="Health Care"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#CB214515"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:letterSpacing="0.08"
+                android:text="The Health Services Department"
+                android:textAlignment="center"
+                android:textColor="@color/dark_green"
+                android:textSize="15sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view00"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="About"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view01"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/info1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:text=" The Medical Services Department at the universs (e" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view10"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Provided Medical Services"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Here are the diverse medical services provided by Birzeit University. It's important to note that certain services are exclusively available to university students and staff. Click on the service for more information!"
+                    android:textAlignment="center"
+                    android:textColor="#2B581C"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/medicineButton"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#149FCF8E"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="General Medicine Clinic"
+                    android:textColor="#2B581C"
+                    android:textSize="15sp"
+                    app:cornerRadius="5dp"
+                    app:strokeColor="@color/sararom_map_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/dentalButton"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#149FCF8E"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Dental Clinic"
+                    android:textColor="#2B581C"
+                    android:textSize="15sp"
+                    app:cornerRadius="5dp"
+                    app:strokeColor="@color/sararom_map_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/ambulanceButton"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#149FCF8E"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Ambulance and Emergency"
+                    android:textColor="#2B581C"
+                    android:textSize="15sp"
+                    app:cornerRadius="5dp"
+                    app:strokeColor="@color/sararom_map_color"
+                    app:strokeWidth="1dp" />
+
+                <Button
+                    android:id="@+id/othersButton"
+                    android:layout_width="350dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="#149FCF8E"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Others"
+                    android:textColor="#2B581C"
+                    android:textSize="15sp"
+                    app:cornerRadius="5dp"
+                    app:strokeColor="@color/sararom_map_color"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Contact Information"
+                        android:textColor="#2B581C"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="100dp"
+                        android:layout_height="1.5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="#2B581C" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/open_sans"
+                    android:text="Here is the contact information for the university clinic. Feel free to use these details to reach out directly in case of any emergency. Your safety is our priority.\nStay safe and take care <3"
+                    android:textAlignment="center"
+                    android:textColor="#2B581C"
+                    android:textSize="10sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/locationButton"
+                        android:layout_width="140dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="10dp"
+                        android:backgroundTint="@color/light_green"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="15dp"
+                        android:text="Find Location"
+                        android:textColor="#2B581C"
+                        android:textSize="13sp"
+                        app:cornerRadius="15dp"
+                        app:icon="@drawable/doha_vector_map"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="@color/sararom_lite_green"
+                        app:strokeWidth="1.5dp" />
+
+                    <Button
+                        android:id="@+id/mailButton"
+                        android:layout_width="250dp"
+                        android:layout_height="90dp"
+                        android:layout_gravity="start"
+                        android:backgroundTint="@color/light_green"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="10dp"
+                        android:text="Email director.meds@birzeit.edu"
+                        android:textColor="#2B581C"
+                        android:textSize="13sp"
+                        app:cornerRadius="15dp"
+                        app:icon="@android:drawable/ic_dialog_email"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="35dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="@color/sararom_lite_green"
+                        app:strokeWidth="1.5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/phone1Button"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/light_green"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="20dp"
+                        android:text="Telephone 022982151"
+                        android:textColor="#2B581C"
+                        android:textSize="13sp"
+                        app:cornerRadius="15dp"
+                        app:icon="@android:drawable/stat_sys_phone_call"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="@color/sararom_lite_green"
+                        app:strokeWidth="1.5dp" />
+
+                    <Button
+                        android:id="@+id/phone2Button"
+                        android:layout_width="150dp"
+                        android:layout_height="90dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/light_green"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:padding="20dp"
+                        android:text="Cellular 0592982001"
+                        android:textColor="#2B581C"
+                        android:textSize="13sp"
+                        app:cornerRadius="10dp"
+                        app:icon="@android:drawable/stat_sys_speakerphone"
+                        app:iconGravity="textStart"
+                        app:iconPadding="0dp"
+                        app:iconSize="45dp"
+                        app:iconTint="#2B581C"
+                        app:strokeColor="@color/sararom_lite_green"
+                        app:strokeWidth="1.5dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

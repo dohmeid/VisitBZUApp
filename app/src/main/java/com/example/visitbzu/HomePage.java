@@ -20,6 +20,7 @@ import android.widget.Button;
 
 import com.example.visitbzu.features.faculties.SaraIssaFacultyOfInformationTechnology;
 import com.example.visitbzu.features.faq.sararom_FAQs;
+import com.example.visitbzu.features.healthCare.HealthCare;
 import com.example.visitbzu.features.libraries.SaraIssaLibraries;
 import com.example.visitbzu.features.map.sararom_Map;
 import com.example.visitbzu.features.prayers.SaraIssaPrayer;
@@ -45,7 +46,7 @@ public class HomePage extends AppCompatActivity {
     String language; //save the app language here
     SearchView searchView;
     //ListView listView;
-    Button mapBtn, virTourBtn, faqsBtn, prayersBtn, facultiesBtn, museumsLibrariesBtn;
+    Button mapBtn, virTourBtn,healthCareBtn, faqsBtn, prayersBtn, facultiesBtn, museumsLibrariesBtn;
     RecyclerView historyRV, suggestionsRV;
 
 
@@ -247,6 +248,15 @@ public class HomePage extends AppCompatActivity {
             startActivity(i);
             finish();
         });
+
+        //HealthCare feature
+        healthCareBtn = findViewById(R.id.healthCareButton);
+        healthCareBtn.setOnClickListener(view -> {
+            Intent i = new Intent(HomePage.this, HealthCare.class);
+            startActivity(i);
+            finish();
+        });
+
 
         //--------------------Sara Issa features
         //prayers feature

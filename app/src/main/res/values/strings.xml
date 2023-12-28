@@ -27,8 +27,6 @@
     <string name="suggestions_text">We recommend that you spend some time exploring our beautiful campus. Here are some places you should not miss.</string>
 
 
-
-
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label" translatable="false">First Fragment</string>
     <string name="second_fragment_label" translatable="false">Second Fragment</string>
