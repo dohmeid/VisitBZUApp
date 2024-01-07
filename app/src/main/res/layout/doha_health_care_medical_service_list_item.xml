@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="ffffffff"
+        android:textSize="15sp"
+        android:textColor="#E6214515"
+        android:fontFamily="@font/open_sans_bold"/>
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="0dp"
+        android:text="Detection and Diagnosis: Detection of any inflammations or diseases in the teeth, gums, or oral cavity, with prescription of appropriate treatment"
+        android:textColor="#E6214515"
+        android:textSize="13sp"
+        android:fontFamily="@font/open_sans"/>
+</LinearLayout>

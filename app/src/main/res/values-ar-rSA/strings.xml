@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VisitBZU</string>
 
-    <!-- Strings used for home page translation "@string/map" -->
+    <!-- Strings used for home page translation -->
     <string name="birzeit_university">جامعة بيرزيت</string>
     <string name="hello_guest">مرحبا بك</string>
-
     <string name="search_hint">أنا أبحث عن ...</string>
-
     <!-- home page buttons -->
     <string name="map">الخريطة</string>
     <string name="virtual_tour">جولة افتراضية</string>
@@ -20,9 +17,28 @@
     <string name="prayers">المصليات</string>
     <string name="parking_transportation">خدمات النقل ومواقف السيارات</string>
     <string name="faqs">الأسئلة الشائعة</string>
-
     <string name="history_heading">التاريخ يحيط بك</string>
     <string name="suggestions_heading">استكشف الحرم الجامعي</string>
     <string name="suggestions_text">ننصحك بقضاء بعض الوقت في استكشاف حرمنا الجامعي الجميل. إليك بعض الأماكن التي يجب ألا تفوتها.</string>
+
+
+    <!-- Strings used for healthCare translation "@string/health" -->
+    <string name="health_care_heading2">قسم الخدمات الصحية</string>
+    <string name="about">حول</string>
+    <!-- healthCare services -->
+    <string name="provided_medical_services">الخدمات الطبية المقدمة</string>
+    <string name="provided_medical_services_paragraph">إليكم الخدمات الطبية المتنوعة التي تقدمها جامعة بيرزيت. من المهم ملاحظة أن بعض الخدمات متاحة حصريًا لطلاب الجامعة وموظفيها. انقر على الخدمة لمزيد من المعلومات!</string>
+    <string name="medicine_clinic">عيادة الطب العام</string>
+    <string name="dental_clinic">عيادة الأسنان</string>
+    <string name="ambulance_and_emergency">الإسعاف والطوارئ</string>
+    <string name="others">آخرون</string>
+    <!-- healthCare services contact information -->
+    <string name="contact_information">معلومات الاتصال</string>
+    <string name="contact_information_heading2">إليك معلومات الاتصال بعيادة الجامعة. لا تتردد في استخدام هذه التفاصيل للتواصل مباشرة في حالة حدوث أي طارئ. سلامتك هي أولويتنا.
+ابقَ آمنًا واعتني بنفسك &lt;3</string>
+    <string name="find_location">البحث عن الموقع</string>
+    <string name="email">البريد الإلكتروني director.meds@birzeit.edu</string>
+    <string name="telephone">هاتف 022982151</string>
+    <string name="cellular">جوّال 0592982001</string>
 
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:background="#BF043418"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/open_sans"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="0dp"
+        android:paddingRight="15dp"
+        android:text="Over a century, what began as a small girls’ school in Birzeit town has become the most prestigious Palestinian university, transforming Palestinian higher education through its impact on community awareness, culture, and resistance."
+        android:textColor="@color/dark_green"
+        android:textSize="10sp" />
+
+</androidx.cardview.widget.CardView>

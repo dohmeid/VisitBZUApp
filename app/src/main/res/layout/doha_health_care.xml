@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
     tools:context=".features.healthCare.HealthCare">
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backButton"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginStart="0dp"
         android:layout_marginTop="5dp"
         android:backgroundTint="#FFFFFF"
+        android:layout_gravity="left"
         app:srcCompat="@drawable/doha_vector_back" />
 
     <ScrollView
@@ -36,7 +36,7 @@
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:letterSpacing="0.1"
-                android:text="Health Care"
+                android:text="@string/health_care"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="#CB214515"
@@ -49,7 +49,7 @@
                 android:layout_marginBottom="30dp"
                 android:fontFamily="@font/montserrat_medium"
                 android:letterSpacing="0.08"
-                android:text="The Health Services Department"
+                android:text="@string/health_care_heading2"
                 android:textAlignment="center"
                 android:textColor="@color/dark_green"
                 android:textSize="15sp" />
@@ -80,7 +80,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="About"
+                        android:text="@string/about"
                         android:textColor="#2B581C"
                         android:textSize="12sp" />
 
@@ -94,14 +94,17 @@
 
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/info1"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/aboutRV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="30dp"
-                    android:text=" The Medical Services Department at the universs (e" />
+                    android:scrollbars="horizontal"
+                    tools:itemCount="3" />
+
 
             </LinearLayout>
+
+
 
 
             <LinearLayout
@@ -129,7 +132,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Provided Medical Services"
+                        android:text="@string/provided_medical_services"
                         android:textColor="#2B581C"
                         android:textSize="12sp" />
 
@@ -149,7 +152,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/open_sans"
-                    android:text="Here are the diverse medical services provided by Birzeit University. It's important to note that certain services are exclusively available to university students and staff. Click on the service for more information!"
+                    android:text="@string/provided_medical_services_paragraph"
                     android:textAlignment="center"
                     android:textColor="#2B581C"
                     android:textSize="10sp" />
@@ -161,7 +164,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#149FCF8E"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="General Medicine Clinic"
+                    android:text="@string/medicine_clinic"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     app:cornerRadius="5dp"
@@ -175,7 +178,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#149FCF8E"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Dental Clinic"
+                    android:text="@string/dental_clinic"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     app:cornerRadius="5dp"
@@ -189,7 +192,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#149FCF8E"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Ambulance and Emergency"
+                    android:text="@string/ambulance_and_emergency"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     app:cornerRadius="5dp"
@@ -203,7 +206,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#149FCF8E"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Others"
+                    android:text="@string/others"
                     android:textColor="#2B581C"
                     android:textSize="15sp"
                     app:cornerRadius="5dp"
@@ -238,7 +241,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Contact Information"
+                        android:text="@string/contact_information"
                         android:textColor="#2B581C"
                         android:textSize="12sp" />
 
@@ -258,7 +261,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/open_sans"
-                    android:text="Here is the contact information for the university clinic. Feel free to use these details to reach out directly in case of any emergency. Your safety is our priority.\nStay safe and take care <3"
+                    android:text="@string/contact_information_heading2"
                     android:textAlignment="center"
                     android:textColor="#2B581C"
                     android:textSize="10sp" />
@@ -270,13 +273,14 @@
 
                     <Button
                         android:id="@+id/locationButton"
-                        android:layout_width="140dp"
+                        android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
                         android:backgroundTint="@color/light_green"
                         android:fontFamily="@font/montserrat_medium"
                         android:padding="15dp"
-                        android:text="Find Location"
+                        android:text="@string/find_location"
                         android:textColor="#2B581C"
                         android:textSize="13sp"
                         app:cornerRadius="15dp"
@@ -290,13 +294,14 @@
 
                     <Button
                         android:id="@+id/mailButton"
-                        android:layout_width="250dp"
+                        android:layout_width="150dp"
                         android:layout_height="90dp"
-                        android:layout_gravity="start"
+                        android:layout_weight="10"
+                        android:layout_gravity="center"
                         android:backgroundTint="@color/light_green"
                         android:fontFamily="@font/montserrat_medium"
                         android:padding="10dp"
-                        android:text="Email director.meds@birzeit.edu"
+                        android:text="@string/email"
                         android:textColor="#2B581C"
                         android:textSize="13sp"
                         app:cornerRadius="15dp"
@@ -308,6 +313,7 @@
                         app:strokeColor="@color/sararom_lite_green"
                         app:strokeWidth="1.5dp" />
 
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -315,7 +321,7 @@
                     android:layout_height="wrap_content">
 
                     <Button
-                        android:id="@+id/phone1Button"
+                        android:id="@+id/telephoneButton"
                         android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:layout_marginEnd="10dp"
@@ -323,7 +329,7 @@
                         android:backgroundTint="@color/light_green"
                         android:fontFamily="@font/montserrat_medium"
                         android:padding="20dp"
-                        android:text="Telephone 022982151"
+                        android:text="@string/telephone"
                         android:textColor="#2B581C"
                         android:textSize="13sp"
                         app:cornerRadius="15dp"
@@ -336,14 +342,14 @@
                         app:strokeWidth="1.5dp" />
 
                     <Button
-                        android:id="@+id/phone2Button"
+                        android:id="@+id/cellularButton"
                         android:layout_width="150dp"
                         android:layout_height="90dp"
                         android:layout_weight="1"
                         android:backgroundTint="@color/light_green"
                         android:fontFamily="@font/montserrat_medium"
                         android:padding="20dp"
-                        android:text="Cellular 0592982001"
+                        android:text="@string/cellular"
                         android:textColor="#2B581C"
                         android:textSize="13sp"
                         app:cornerRadius="10dp"

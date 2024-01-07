@@ -2,12 +2,10 @@
     <string name="app_name" translatable="false">VisitBZU</string>
     <string name="title_activity_welcome_page" translatable="false">WelcomePage</string>
 
-    <!-- Strings used for home page translation "@string/map" -->
+    <!-- Strings used for home page translation -->
     <string name="birzeit_university">BIRZEIT UNIVERSITY</string>
     <string name="hello_guest">HELLO, GUEST!</string>
-
-    <string name="search_hint">I am looking for ...</string>
-
+    <string name="search_hint">I am looking for …</string>
     <!-- home page buttons -->
     <string name="map">Map</string>
     <string name="virtual_tour">Virtual Tour</string>
@@ -20,11 +18,28 @@
     <string name="prayers">Prayers</string>
     <string name="parking_transportation">Parking &amp; Transportation Services</string>
     <string name="faqs">FAQS</string>
-
-
+    <!-- home page recycle views -->
     <string name="history_heading">History Surrounds You</string>
     <string name="suggestions_heading">Explore Campus</string>
     <string name="suggestions_text">We recommend that you spend some time exploring our beautiful campus. Here are some places you should not miss.</string>
+
+    <!-- Strings used for healthCare translation "@string/health" -->
+    <string name="health_care_heading2">The Health Services Department</string>
+    <string name="about">About</string>
+    <!-- healthCare services -->
+    <string name="provided_medical_services">Provided Medical Services</string>
+    <string name="provided_medical_services_paragraph">Here are the diverse medical services provided by Birzeit University. It\'s important to note that certain services are exclusively available to university students and staff. Click on the service for more information!"</string>
+    <string name="medicine_clinic">General Medicine Clinic</string>
+    <string name="dental_clinic">Dental Clinic</string>
+    <string name="ambulance_and_emergency">Ambulance and Emergency</string>
+    <string name="others">Others</string>
+    <!-- healthCare services contact information -->
+    <string name="contact_information">Contact Information</string>
+    <string name="contact_information_heading2">Here is the contact information for the university clinic. Feel free to use these details to reach out directly in case of any emergency. Your safety is our priority.\nStay safe and take care &lt;3"</string>
+    <string name="find_location">Find Location</string>
+    <string name="email">Email director.meds@birzeit.edu</string>
+    <string name="telephone">Telephone 022982151</string>
+    <string name="cellular">Cellular 0592982001</string>
 
 
     <!-- Strings used for fragments for navigation -->
